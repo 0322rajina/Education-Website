@@ -42,56 +42,46 @@ setInterval(() => {
   changeTestimonial(1);
 }, 5000);
 
-//contact part
-document.addEventListener('DOMContentLoaded', function() {
-  const contactForm = document.getElementById('contactForm');
-  const faqItems = document.querySelectorAll('.faq-item');
-  const virtualTourBtn = document.getElementById('virtualTourBtn');
-  const virtualTourModal = document.getElementById('virtualTourModal');
-  const closeModal = document.getElementById('closeModal');
+// Contact form validation & submission
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
 
-  // Form submission handling
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    if (!name || !email || !message) {
-      alert('Please fill in all fields.');
-      return;
-    }
-
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-      alert('Please enter a valid email address.');
-      return;
-    }
-
-    alert('Thank you for your message! We will get back to you soon.');
-    contactForm.reset();
-  });
-
-  // FAQ toggle
-  faqItems.forEach(item => {
-    item.addEventListener('click', function() {
-      this.classList.toggle('active');
+        if(!name || !email || !message){
+            alert('Please fill in all fields.');
+            return;
+        }
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(!emailPattern.test(email)){
+            alert('Please enter a valid email address.');
+            return;
+        }
+        alert('Thank you for your message! We will get back to you soon.');
+        contactForm.reset();
     });
-  });
 
-  // Virtual Tour Modal
-  virtualTourBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    virtualTourModal.style.display = 'flex';
-  });
+    // FAQ toggle
+    faqItems.forEach(item => {
+        item.querySelector('.faq-question').addEventListener('click', function() {
+            item.classList.toggle('active');
+        });
+    });
 
-  closeModal.addEventListener('click', function() {
-    virtualTourModal.style.display = 'none';
-  });
+    // Virtual Tour modal
+    virtualTourBtn.addEventListener('click', function(e){
+        e.preventDefault();
+        virtualTourModal.style.display = 'flex';
+    });
 
-  window.addEventListener('click', function(e) {
-    if (e.target === virtualTourModal) {
-      virtualTourModal.style.display = 'none';
-    }
-  });
-});
+    closeTourBtn.addEventListener('click', function(){
+        virtualTourModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(e){
+        if(e.target === virtualTourModal){
+            virtualTourModal.style.display = 'none';
+        }
+    });
+    

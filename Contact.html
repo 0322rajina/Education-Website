@@ -1,189 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grammar College - Contact Us</title>
-  
-  <!-- Font & Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- External CSS -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar College - Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="contact-section">
-    <div class="contact-info">
-      <h2>CONTACT</h2>
-      <p>We'd love to help! At Grammar College, we believe in creating things with fun, open-minded people. Feel free to say hello.</p>
-      
-      <div class="contact-details">
-        <div class="contact-item">
-          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-          <div class="contact-text">
-            <h4>Our Location</h4>
-            <p>Koteshwor, Kathmandu, Nepal</p>
-          </div>
-        </div>
 
-        <div class="contact-item">
-          <div class="contact-icon"><i class="fas fa-phone"></i></div>
-          <div class="contact-text">
-            <h4>Call Us</h4>
-            <p>+977-1-1234567</p>
-          </div>
+    <section class="contact-section">
+        <div class="contact-info">
+            <h2>CONTACT</h2>
+            <p>We'd love to help! At Grammar College, we believe in creating things with fun, open-minded people. Feel free to say hello.</p>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-text"><h4>Our Location</h4><p>Koteshwor, Kathmandu, Nepal</p></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div class="contact-text"><h4>Call Us</h4><p>+977-1-1234567</p></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-text"><h4>Email Us</h4><p>info@grammarcollege.edu.np</p></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                    <div class="contact-text"><h4>Office Hours</h4><p>Sun-Fri: 9:00 AM - 5:00 PM</p></div>
+                </div>
+            </div>
         </div>
-
-        <div class="contact-item">
-          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-          <div class="contact-text">
-            <h4>Email Us</h4>
-            <p>info@grammarcollege.edu.np</p>
-          </div>
+        <div class="contact-form">
+            <h2 class="form-title">Get In Touch</h2>
+            <p class="form-subtitle">Have questions? We're here to help.</p>
+            <form id="contactForm">
+                <div class="input-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+            </form>
         </div>
+    </section>
 
-        <div class="contact-item">
-          <div class="contact-icon"><i class="fas fa-clock"></i></div>
-          <div class="contact-text">
-            <h4>Office Hours</h4>
-            <p>Sun-Fri: 9:00 AM - 5:00 PM</p>
-          </div>
+    <div class="additional-features">
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>Admissions Info</h3>
+            <p>Get information about our programs, admission requirements, and application process.</p>
         </div>
-      </div>
-    </div>
-    
-    <div class="contact-form">
-      <h2 class="form-title">Get In Touch</h2>
-      <p class="form-subtitle">Have questions? We're here to help.</p>
-      
-      <form id="contactForm">
-        <div class="input-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
+            <h3>Upcoming Events</h3>
+            <p>Stay updated with our college events, workshops, and academic calendar.</p>
         </div>
-
-        <div class="input-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-book-open"></i></div>
+            <h3>Resources</h3>
+            <p>Access learning materials, library resources, and student support services.</p>
         </div>
-
-        <div class="input-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
-        </div>
-
-        <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Additional Features -->
-  <div class="additional-features">
-    <div class="feature-card">
-      <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
-      <h3>Admissions Info</h3>
-      <p>Get information about our programs, admission requirements, and application process.</p>
     </div>
 
-    <div class="feature-card">
-      <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
-      <h3>Upcoming Events</h3>
-      <p>Stay updated with our college events, workshops, and academic calendar.</p>
+    <section class="map-section">
+        <h2 class="section-title">Find Our Campus</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14130.873449034793!2d85.344268!3d27.67870215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1968cee7500d%3A0x260f11a4a2e7c416!2sKoteshwor%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1684838997892!5m2!1sen!2snp" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="map-actions">
+            <a href="https://maps.google.com/?q=Grammar+College+Koteshwor+Kathmandu" target="_blank" class="action-btn direction-btn">
+                <i class="fas fa-directions"></i> Get Directions
+            </a>
+            <a href="#" class="action-btn tour-btn" id="virtualTourBtn">
+                <i class="fas fa-video"></i> Virtual Tour
+            </a>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question"><span>How do I apply for admission?</span><div class="faq-toggle"><i class="fas fa-chevron-down"></i></div></div>
+                <div class="faq-answer"><p>You can apply online through our website or visit our admissions office in person...</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><span>What are the scholarship opportunities?</span><div class="faq-toggle"><i class="fas fa-chevron-down"></i></div></div>
+                <div class="faq-answer"><p>We offer various scholarships based on academic merit, financial need, and special talents...</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><span>When does the new semester begin?</span><div class="faq-toggle"><i class="fas fa-chevron-down"></i></div></div>
+                <div class="faq-answer"><p>The academic calendar varies by program. Generally, fall semester begins in September...</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><span>Can I schedule a campus tour?</span><div class="faq-toggle"><i class="fas fa-chevron-down"></i></div></div>
+                <div class="faq-answer"><p>Yes, we welcome prospective students and their families to tour our campus...</p></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Grammar College. All rights reserved. | Designed with <i class="fas fa-heart" style="color: #e91e63;"></i> for education</p>
+    </footer>
+
+    <div id="virtualTourModal">
+        <div class="modal-content">
+            <h2>Virtual Campus Tour</h2>
+            <p>Our virtual tour allows you to explore our campus from anywhere. You can:</p>
+            <ul>
+                <li>Take a 360° tour of our classrooms and facilities</li>
+                <li>View our campus amenities and student spaces</li>
+                <li>See our laboratories and library resources</li>
+                <li>Explore our sports facilities and grounds</li>
+            </ul>
+            <p>Our virtual tour is currently being updated. Please check back soon or contact us to schedule an in-person visit.</p>
+            <button id="closeTourBtn">Close</button>
+        </div>
     </div>
 
-    <div class="feature-card">
-      <div class="feature-icon"><i class="fas fa-book-open"></i></div>
-      <h3>Resources</h3>
-      <p>Access learning materials, library resources, and student support services.</p>
-    </div>
-  </div>
-
-  <!-- Map Section -->
-  <section class="map-section">
-    <h2 class="section-title">Find Our Campus</h2>
-    <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14130.873449034793!2d85.344268!3d27.67870215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1968cee7500d%3A0x260f11a4a2e7c416!2sKoteshwor%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1684838997892!5m2!1sen!2snp" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-    
-    <div class="map-actions">
-      <a href="https://maps.google.com/?q=Grammar+College+Koteshwor+Kathmandu" target="_blank" class="action-btn direction-btn">
-        <i class="fas fa-directions"></i> Get Directions
-      </a>
-      <a href="#" class="action-btn tour-btn" id="virtualTourBtn">
-        <i class="fas fa-video"></i> Virtual Tour
-      </a>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="faq-section">
-    <h2 class="section-title">Frequently Asked Questions</h2>
-    <div class="faq-container">
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>How do I apply for admission?</span>
-          <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
-        </div>
-        <div class="faq-answer">
-          <p>You can apply online through our website or visit our admissions office in person. The application process requires your academic transcripts, identification documents, and a completed application form.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>What are the scholarship opportunities?</span>
-          <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
-        </div>
-        <div class="faq-answer">
-          <p>We offer various scholarships based on academic merit, financial need, and special talents. Please contact our financial aid office for detailed information about eligibility and application procedures.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>When does the new semester begin?</span>
-          <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
-        </div>
-        <div class="faq-answer">
-          <p>The academic calendar varies by program. Generally, fall semester begins in September and spring semester in January. Please check our academic calendar for specific dates.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>Can I schedule a campus tour?</span>
-          <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
-        </div>
-        <div class="faq-answer">
-          <p>Yes, we welcome prospective students and their families to tour our campus. You can schedule a tour by calling our admissions office or using the online booking system on our website.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Grammar College. All rights reserved. | Designed with <i class="fas fa-heart" style="color: #e91e63;"></i> for education</p>
-  </footer>
-
-  <!-- Virtual Tour Modal -->
-  <div id="virtualTourModal" class="modal">
-    <div class="modal-content">
-      <h2>Virtual Campus Tour</h2>
-      <p>Our virtual tour allows you to explore our campus from anywhere. You can:</p>
-      <ul>
-        <li>Take a 360° tour of our classrooms and facilities</li>
-        <li>View our campus amenities and student spaces</li>
-        <li>See our laboratories and library resources</li>
-        <li>Explore our sports facilities and grounds</li>
-      </ul>
-      <p>Our virtual tour is currently being updated. Please check back soon or contact us to schedule an in-person visit.</p>
-      <button id="closeModal">Close</button>
-    </div>
-  </div>
-
-  <!-- External JS -->
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-
