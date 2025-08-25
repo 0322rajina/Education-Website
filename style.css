@@ -438,3 +438,475 @@ footer { text-align:center; padding:30px 0; color:#666; border-top:1px solid #e0
 @media(max-width:992px){.contact-section{grid-template-columns:1fr}.additional-features{grid-template-columns:1fr 1fr}.faq-container{grid-template-columns:1fr}}
 @media(max-width:768px){header{flex-direction:column;text-align:center;gap:20px}.map-actions{flex-direction:column;align-items:center}.contact-info,.contact-form{padding:30px}.additional-features{grid-template-columns:1fr}}
 @media(max-width:576px){.contact-info h2{font-size:28px}.form-title{font-size:24px}.section-title{font-size:28px}.contact-item{flex-direction:column;text-align:center}.contact-icon{margin-bottom:10px}.contact-text h4{font-size:18px}.contact-text p{font-size:14px}.input-group label{font-size:14px}.input-group input,.input-group textarea{font-size:14px}.submit-btn{font-size:14px}.feature-card h3{font-size:18px}.feature-card p{font-size:14px}.faq-question{font-size:16px}.faq-answer{font-size:14px}}
+
+/* //FAQ section */
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* FAQ Section */
+.faq-section {
+  max-width: 1000px;
+  margin: auto;
+}
+.faq-title {
+  text-align: center;
+  font-size: 28px;
+  color: #2e7d32;
+  margin-bottom: 5px;
+}
+.faq-title span {
+  color: #ff6f00;
+}
+.faq-subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Tabs */
+.faq-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.tab {
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+  background: #e0e0e0;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.tab.active, .tab:hover {
+  background: #2e7d32;
+  color: #fff;
+}
+
+/* FAQ Content */
+.faq-content {
+  border-radius: 10px;
+}
+.faq-panel {
+  display: none;
+}
+.faq-panel.active {
+  display: block;
+}
+.faq-category-title {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #1b5e20;
+  font-size: 15px;
+}
+
+.faq-item {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+.faq-question {
+  width: 100%;
+  padding: 8px;
+  background: #fafafa;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 13px;
+}
+.faq-question:hover {
+  background: #e8f5e9;
+}
+.faq-icon {
+  transition: transform 0.3s;
+}
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: #f9fff9;
+  padding: 0 10px;
+}
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 10px;
+  font-size: 12px;
+}
+
+/* Feedback Section */
+.feedback-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Comments Box */
+.comments-section {
+  flex: 1;
+  min-width: 280px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: inherit;
+}
+
+/* Share Experience Box */
+.review-form {
+  flex: 1;
+  min-width: 280px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: inherit;
+}
+.review-form h3 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #2e7d32;
+}
+.review-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.review-form input,
+.review-form textarea,
+.review-form button {
+  font-family: inherit;
+}
+.review-form input,
+.review-form textarea {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  resize: vertical;
+}
+.review-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #2e7d32;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.review-form button:hover {
+  background: #1b5e20;
+}
+
+/* Comments */
+.comment {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.comment img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.comment-text h4 {
+  margin: 0 0 3px 0;
+  color: #2e7d32;
+  font-size: 13px;
+}
+.comment-text p {
+  margin: 0;
+  font-size: 12px;
+  color: #444;
+}
+.comment-actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.comment-actions button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 12px;
+}
+.action-count {
+  min-width: 18px;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(to right, #2e7d32, #1b5e20);
+  color: #fff;
+  padding: 60px 20px 20px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.footer-box {
+  flex: 1;
+  min-width: 250px;
+  padding: 10px 20px;
+}
+
+.footer-box h4 {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.footer-box h4::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #ff6f00;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+.footer-box p,
+.footer-box li a {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #fff;
+}
+
+.footer-box a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-box a:hover {
+  color: #ff6f00;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-box ul li {
+  margin: 8px 0;
+  position: relative;
+  padding-left: 15px;
+}
+
+.footer-box ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ff6f00;
+}
+
+/* Subscribe Box */
+.subscribe-box {
+  max-width: 250px;
+  margin-bottom: 10px;
+}
+
+.subscribe-box input[type="email"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+
+.subscribe-box input::placeholder {
+  color: #fff;
+}
+
+.subscribe-btn {
+  max-width: 250px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 50px;
+  border: none;
+  background: #ff6f00;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subscribe-btn:hover {
+  background: #e65100;
+}
+
+/* Social Icons */
+.social-icons a {
+  color: #fff;
+  margin-right: 12px;
+  font-size: 16px;
+  display: inline-block;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff6f00;
+  transform: translateY(-3px);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: 40px;
+  padding-top: 15px;
+  font-size: 13px;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 1024px) {
+  .feedback-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .faq-tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .tab {
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 0 10px;
+  }
+
+  .faq-title {
+    font-size: 24px;
+  }
+
+  .faq-subtitle {
+    font-size: 13px;
+  }
+
+  .faq-category-title {
+    font-size: 14px;
+  }
+
+  .faq-question {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .faq-answer {
+    font-size: 11px;
+  }
+
+  .review-form input,
+  .review-form textarea {
+    font-size: 11px;
+    padding: 6px;
+  }
+
+  .review-form button {
+    font-size: 11px;
+    padding: 8px;
+  }
+
+  .comment-text h4 {
+    font-size: 12px;
+  }
+
+  .comment-text p {
+    font-size: 11px;
+  }
+
+  .comments-section,
+  .review-form {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-title {
+    font-size: 20px;
+  }
+
+  .faq-subtitle {
+    font-size: 12px;
+  }
+
+  .faq-tabs {
+    gap: 6px;
+  }
+
+  .tab {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  .faq-question {
+    font-size: 11px;
+    padding: 5px;
+  }
+
+  .faq-answer {
+    font-size: 10px;
+  }
+
+  .review-form h3 {
+    font-size: 13px;
+  }
+
+  .review-form input,
+  .review-form textarea {
+    font-size: 10px;
+    padding: 5px;
+  }
+
+  .review-form button {
+    font-size: 10px;
+    padding: 7px;
+  }
+
+  .comment-text h4 {
+    font-size: 11px;
+  }
+
+  .comment-text p {
+    font-size: 10px;
+  }
+}
