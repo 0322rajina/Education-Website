@@ -87,6 +87,7 @@ setInterval(() => {
     
     //FAQ part
     // ===== Comments Like/Dislike with Toggle =====
+// ===== Comments Like/Dislike with Toggle =====
 const likeButtons = document.querySelectorAll('.like-btn');
 const dislikeButtons = document.querySelectorAll('.dislike-btn');
 
