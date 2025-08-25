@@ -85,3 +85,61 @@ setInterval(() => {
         }
     });
     
+    //FAQ part
+    // ===== Comments Like/Dislike with Toggle =====
+const likeButtons = document.querySelectorAll('.like-btn');
+const dislikeButtons = document.querySelectorAll('.dislike-btn');
+
+const commentState = {}; // store state per comment
+
+likeButtons.forEach(btn => {
+  const id = btn.getAttribute('data-comment');
+  commentState[id] = commentState[id] || { liked: false, disliked: false };
+
+  btn.addEventListener('click', () => {
+    const countSpan = document.getElementById(`like-count-${id}`);
+    const dislikeSpan = document.getElementById(`dislike-count-${id}`);
+
+    if(commentState[id].liked) {
+      // undo like
+      countSpan.textContent = parseInt(countSpan.textContent) - 1;
+      commentState[id].liked = false;
+    } else {
+      // like
+      countSpan.textContent = parseInt(countSpan.textContent) + 1;
+      commentState[id].liked = true;
+
+      // remove dislike if previously disliked
+      if(commentState[id].disliked) {
+        dislikeSpan.textContent = parseInt(dislikeSpan.textContent) - 1;
+        commentState[id].disliked = false;
+      }
+    }
+  });
+});
+
+dislikeButtons.forEach(btn => {
+  const id = btn.getAttribute('data-comment');
+  commentState[id] = commentState[id] || { liked: false, disliked: false };
+
+  btn.addEventListener('click', () => {
+    const countSpan = document.getElementById(`dislike-count-${id}`);
+    const likeSpan = document.getElementById(`like-count-${id}`);
+
+    if(commentState[id].disliked) {
+      // undo dislike
+      countSpan.textContent = parseInt(countSpan.textContent) - 1;
+      commentState[id].disliked = false;
+    } else {
+      // dislike
+      countSpan.textContent = parseInt(countSpan.textContent) + 1;
+      commentState[id].disliked = true;
+
+      // remove like if previously liked
+      if(commentState[id].liked) {
+        likeSpan.textContent = parseInt(likeSpan.textContent) - 1;
+        commentState[id].liked = false;
+      }
+    }
+  });
+});
