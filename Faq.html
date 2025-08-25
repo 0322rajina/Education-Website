@@ -1,33 +1,210 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced FAQ - Grammar School & College</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="faq.css">
 </head>
 <body>
-    <header>
-        <h1>EduAcademy</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="Join.html">Join</a></li>
-                <li> <a href="Contact.html">Contact us</a></li>
-                <li><a href="Team.html">Team</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="Resources.html">Resources</a></li>
-                <li><a href="Faq.html">FAQ</a></li>
-                <li><a href="Blog.html">Blog</a></li>
-                <li><a href="Gallery.html">Gallery</a></li>
-                <li><a href="Login.html">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-    <footer>
-        <p>&copy; 2023 EduAcademy. All rights reserved.</p> 
-    </footer>
-    <script src="script.js"></script>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <h2 class="faq-title">Frequently <span>Asked Questions</span></h2>
+    <p class="faq-subtitle">Find answers to the most common questions about Grammar School & College.</p>
+
+    <!-- FAQ Tabs -->
+    <div class="faq-tabs">
+      <button class="tab active" data-tab="general">General</button>
+      <button class="tab" data-tab="admission">Admission</button>
+      <button class="tab" data-tab="programs">Programs</button>
+      <button class="tab" data-tab="scholarship">Scholarship</button>
+      <button class="tab" data-tab="facilities">Facilities</button>
+    </div>
+
+    <!-- FAQ Content -->
+    <div class="faq-content">
+      <!-- General Panel -->
+      <div class="faq-panel active" id="general">
+        <h3 class="faq-category-title">General Questions</h3>
+        <div class="faq-item">
+          <button class="faq-question">Where is Grammar School & College located?<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Koteshwor, Kathmandu, Nepal.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What grades are available?<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Playgroup to Grade 12 (+2 Science, Management, Humanities).</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is Grammar School government recognized?<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Yes, affiliated with the Ministry of Education, Nepal.</p></div>
+        </div>
+      </div>
+
+      <!-- Admission Panel -->
+      <div class="faq-panel" id="admission">
+        <h3 class="faq-category-title">Admission Questions</h3>
+        <div class="faq-item">
+          <button class="faq-question">How can I apply for admission?<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Submit an online application or visit the admission office.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is the admission timeline?<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Admissions open every year in March and close in July.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Are entrance exams required?<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Yes, for some grades an entrance assessment is conducted.</p></div>
+        </div>
+      </div>
+
+      <!-- Programs Panel -->
+      <div class="faq-panel" id="programs">
+        <h3 class="faq-category-title">Programs Questions</h3>
+        <div class="faq-item">
+          <button class="faq-question">Which academic streams are offered?<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Science, Management, Humanities for +2 level.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Are there extracurricular programs?<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Yes, including sports, arts, music, and debate clubs.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is there a co-curricular focus?<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Yes, we encourage balanced development in academics and co-curricular activities.</p></div>
+        </div>
+      </div>
+
+      <!-- Scholarship Panel -->
+      <div class="faq-panel" id="scholarship">
+        <h3 class="faq-category-title">Scholarship Questions</h3>
+        <div class="faq-item">
+          <button class="faq-question">Are scholarships available?<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Yes, merit-based and need-based scholarships are offered.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do I apply for a scholarship?<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Submit a scholarship application along with the required documents to the admission office.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What criteria are used for selection?<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Academic excellence, extracurricular achievements, and financial need are considered.</p></div>
+        </div>
+      </div>
+
+      <!-- Facilities Panel -->
+      <div class="faq-panel" id="facilities">
+        <h3 class="faq-category-title">Facilities Questions</h3>
+        <div class="faq-item">
+          <button class="faq-question">What facilities are available on campus?<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Library, computer labs, science labs, sports facilities, and smart classrooms.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is transportation provided?<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Yes, school buses cover major routes in the city.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Are there hostel facilities?<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Yes, hostel facilities are available for both boys and girls.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comments & Review Section -->
+    <div class="feedback-container">
+      <!-- Comments Left -->
+      <div class="comments-section">
+        <h3>Comments</h3>
+        <div class="comment">
+          <img src="https://i.pravatar.cc/50?img=32" alt="Student">
+          <div class="comment-text">
+            <h4>Anjali Shrestha</h4>
+            <p>Studying at Grammar School has been a life-changing experience!</p>
+          </div>
+          <div class="comment-actions">
+            <button class="like-btn" data-comment="1">👍</button>
+            <span class="action-count" id="like-count-1">0</span>
+            <button class="dislike-btn" data-comment="1">👎</button>
+            <span class="action-count" id="dislike-count-1">0</span>
+          </div>
+        </div>
+        <div class="comment">
+          <img src="https://i.pravatar.cc/50?img=45" alt="Parent">
+          <div class="comment-text">
+            <h4>Sanjay Koirala</h4>
+            <p>My son enjoys the extracurricular activities and modern facilities.</p>
+          </div>
+          <div class="comment-actions">
+            <button class="like-btn" data-comment="2">👍</button>
+            <span class="action-count" id="like-count-2">0</span>
+            <button class="dislike-btn" data-comment="2">👎</button>
+            <span class="action-count" id="dislike-count-2">0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review Right -->
+      <div class="review-form">
+        <h3>💬 Share Your Experience</h3>
+        <form id="reviewForm">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Write your review..." required></textarea>
+          <button type="submit">Submit Review</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+  <div class="footer-container">
+    
+    <!-- School Info -->
+    <div class="footer-box">
+      <h4>Grammar School & College</h4>
+      <p>Koteshwor, Kathmandu, Nepal</p>
+      <p>📞 +977-1-4602259, +977-1-4602347</p>
+      <p>🌐 <a href="https://grammarschool.edu.np/" target="_blank">grammarschool.edu.np</a></p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/grammarschool.college" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://grammarschool.edu.np/" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/grammarschool.college?igsh=OTJ4OGlnM2c3M3A" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtu.be/i7fCteiQ-0U?si=9qWzxD-bMFvYmY-x" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-box">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Admissions</a></li>
+        <li><a href="#">Programs</a></li>
+        <li><a href="#">Facilities</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter / Stay in Touch -->
+    <div class="footer-box">
+      <h4>Stay in Touch</h4>
+      <p>Subscribe to our newsletter for latest updates.</p>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Your email" required>
+      </div>
+      <button type="submit" class="subscribe-btn">Subscribe</button>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Grammar School & College. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+
+  <script src="faq.js"></script>
 </body>
 </html>
