@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resources | EduPlatform</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="CSS/resources.css" />
+    <link rel="stylesheet" href="CSS/style.css"/>
   </head>
   <body>
      <canvas id="trail"></canvas>
@@ -397,35 +398,9 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="trail.js"></script>
+    <script src="JavaScript/resources.js"></script>
+    <script src="JavaScript/trail.js"></script>
   </body>
 </html>
 
 
-    <!-- ===== JavaScript for Tabs ===== -->
-    <script>
-      const tabButtons = document.querySelectorAll(".tab-btn");
-      const tabContents = document.querySelectorAll(".tab-content");
-
-      tabButtons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          // Remove active from buttons
-          tabButtons.forEach((b) => b.classList.remove("active"));
-          btn.classList.add("active");
-
-          // Show corresponding tab content
-          const target = btn.getAttribute("data-tab");
-          tabContents.forEach((content) => {
-            if (content.id === target) {
-              content.classList.add("active");
-            } else {
-              content.classList.remove("active");
-            }
-          });
-        });
-      });
-    </script>
-    <script src="trail.js"></script>
-  </body>
-</html>
