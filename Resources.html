@@ -1,33 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education Website</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resources | EduPlatform</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+     <canvas id="trail"></canvas>
+
+    <!-- ===== Header ===== -->
     <header>
-        <h1>EduAcademy</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="Join.html">Join</a></li>
-                <li> <a href="Contact.html">Contact us</a></li>
-                <li><a href="Team.html">Team</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="Resources.html">Resources</a></li>
-                <li><a href="Faq.html">FAQ</a></li>
-                <li><a href="Blog.html">Blog</a></li>
-                <li><a href="Gallery.html">Gallery</a></li>
-                <li><a href="Login.html">Login</a></li>
+      <nav class="navbar">
+        <div class="logo">
+          <span class="edu">Edu</span><span class="academy">Academy</span>
+        </div>
+
+        <!-- Hamburger Button -->
+        <div class="hamburger">&#9776;</div>
+
+        <ul class="nav-links">
+          <!-- First 5 visible links -->
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="Events.html">Events</a></li>
+          <li><a href="Join.html">Join/Sign Up</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="Contact.html">Contact Us</a></li>
+          <li><a href="Login.html">Login</a></li>
+
+          <!-- Rest inside dropdown -->
+          <li class="dropdown">
+            <a href="#">More ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="Courses.html">Courses</a></li>
+              <li><a href="Team.html">Team</a></li>
+              <li><a href="Resources.html">Resources</a></li>
+              <li><a href="Faq.html">FAQ</a></li>
             </ul>
-        </nav>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <footer>
-        <p>&copy; 2023 EduAcademy. All rights reserved.</p> 
+
+    <!-- ===== Resources Section ===== -->
+    <section class="resources-section">
+      <div class="container">
+        <h1>Educational Resources</h1>
+        <p>Select a course to explore notes, videos, and tools.</p>
+
+        <!-- ===== Tabs (Courses) ===== -->
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="app-design">
+            App Design
+          </button>
+          <button class="tab-btn" data-tab="app-dev">App Development</button>
+          <button class="tab-btn" data-tab="cyber-sec">Cyber Security</button>
+          <button class="tab-btn" data-tab="science">Science</button>
+          <button class="tab-btn" data-tab="finance">Finance</button>
+          <button class="tab-btn" data-tab="uiux">UI/UX</button>
+        </div>
+
+        <!-- ===== Tab Contents ===== -->
+        <!-- App Design -->
+        <div class="tab-content active" id="app-design">
+          <div class="resources-grid">
+            <div class="resource-card">
+              <h2>Notes</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://buildfire.com/wp-content/uploads/2018/02/The-Definitive-Guide-to-Mobile-App-Design.pdf"
+                    target="_blank"
+                    >UI Principles PDF</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.scribd.com/document/575163601/wireframing-guide"
+                    target="_blank"
+                    >Wireframing Guidelines</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="resource-card">
+              <h2>Videos</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.youtube.com/watch?v=uQsyobT2Rv8"
+                    target="_blank"
+                    >Figma Tutorial Videos</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/watch?v=bEusrD8g-dM"
+                    target="_blank"
+                    >Design Thinking Process</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- App Development -->
+        <div class="tab-content" id="app-dev">
+          <div class="resources-grid">
+            <div class="resource-card">
+              <h2>Notes</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://psr.edu.in/wp-content/uploads/2024/12/191CS53-Mobile-Application-Development-NOTES.pdf"
+                    target="_blank"
+                    >Android Development PDF</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://books.google.com.np/books?hl=en&lr=&id=upuPDgAAQBAJ&oi=fnd&pg=PR2&dq=ios+swift+guide&ots=h1j46Exe2N&sig=up1fsQWd0KbTyUCWn983CZR337M&redir_esc=y#v=onepage&q=ios%20swift%20guide&f=false"
+                    target="_blank"
+                    >iOS Swift Guide</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="resource-card">
+              <h2>Videos</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.youtube.com/watch?v=fis26HvvDII"
+                    target="_blank"
+                    >Flutter Tutorial</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/watch?v=f8Z9JyB2EIE"
+                    target="_blank"
+                    >React Native Guide</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cyber Security -->
+        <div class="tab-content" id="cyber-sec">
+          <div class="resources-grid">
+            <div class="resource-card">
+              <h2>Notes</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://mrcet.com/downloads/digital_notes/EEE/CyberSecurity.pdf"
+                    target="_blank"
+                    >Network Security PDF</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.tutorialspoint.com/ethical_hacking/ethical_hacking_pdf_version.htm"
+                    target="_blank"
+                    >Ethical Hacking Guide</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="resource-card">
+              <h2>Videos</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.youtube.com/watch?v=2_lswM1S264"
+                    target="_blank"
+                    >Penetration Testing Tutorials</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/watch?v=Dau89ALHbVc"
+                    target="_blank"
+                    >Security Tools Overview</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Science -->
+        <div class="tab-content" id="science">
+          <div class="resources-grid">
+            <div class="resource-card">
+              <h2>Notes</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.khanacademy.org/science/physics"
+                    target="_blank"
+                    >Physics Worksheets</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.khanacademy.org/science/chemistry"
+                    target="_blank"
+                    >Chemistry Lab Guide</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="resource-card">
+              <h2>Videos</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.youtube.com/c/funsciencedemos"
+                    target="_blank"
+                    >Physics Videos</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/@TheOrganicChemistryTutor"
+                    target="_blank"
+                    >Chemistry Videos</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Finance -->
+        <div class="tab-content" id="finance">
+          <div class="resources-grid">
+            <div class="resource-card">
+              <h2>Notes</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.clevergirlfinance.com/free-online-finance-courses/"
+                    target="_blank"
+                    >Accounting PDFs</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.investopedia.com/terms/i/investmentstrategy.asp"
+                    target="_blank"
+                    >Investment Strategies Guide</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="resource-card">
+              <h2>Videos</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.youtube.com/c/MoneyFit/videos"
+                    target="_blank"
+                    >Budgeting & Saving Videos</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/c/MoneyFit/videos"
+                    target="_blank"
+                    >Investment Videos</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- UI/UX -->
+        <div class="tab-content" id="uiux">
+          <div class="resources-grid">
+            <div class="resource-card">
+              <h2>Notes</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.codecademy.com/learn/intro-to-ui-ux"
+                    target="_blank"
+                    >UI/UXResearch PDF</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.coursera.org/articles/prototyping-tools"
+                    target="_blank"
+                    >Prototyping Tools Guide</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="resource-card">
+              <h2>Videos</h2>
+              <ul>
+                <li>
+                  <a href="https://www.youtube.com/@freecodecamp"
+                    target="_blank"
+                    >UX/UI Figma Tutorial</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!----Footer Section---->
+    <footer class="main-footer">
+      <div class="footer-container">
+        <!-- Logo & About -->
+        <div class="footer-col">
+          <h2 class="footer-logo">🎓 EDUBIN</h2>
+          <p>
+            EDUBIN is a modern learning platform that provides quality education
+            resources, expert-led courses, and community-driven events to
+            empower students worldwide.
+          </p>
+          <!-- Social Media Icons -->
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://youtube.com" target="_blank"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="https://linkedin.com" target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://instagram.com" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Sitemap -->
+        <div class="footer-col">
+          <h3>Sitemap</h3>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="Join.html">Join</a></li>
+            <li><a href="Contact.html">Contact us</a></li>
+            <li><a href="Team.html">Team</a></li>
+            <li><a href="Courses.html">Courses</a></li>
+            <li><a href="Resources.html">Resources</a></li>
+            <li><a href="Events.html">Events</a></li>
+            <li><a href="Faq.html">FAQ</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="SignUp.html">Sign Up</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul class="nav-links">
+            <li><a href="Faq.html">FAQs</a></li>
+            <li><a href="#">Privacy & Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Documentation</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <p>
+            <i class="fas fa-home"></i> 123 Learning Street, New Baneshwor,
+            Kathmandu
+          </p>
+          <p><i class="fas fa-phone"></i> +1 (647) 123-4567, +9779716345689</p>
+          <p><i class="fas fa-envelope"></i> support@edubin.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 EDUBIN. All Rights Reserved.</p>
+      </div>
     </footer>
+
     <script src="script.js"></script>
-</body>
+    <script src="trail.js"></script>
+  </body>
+</html>
+
+
+    <!-- ===== JavaScript for Tabs ===== -->
+    <script>
+      const tabButtons = document.querySelectorAll(".tab-btn");
+      const tabContents = document.querySelectorAll(".tab-content");
+
+      tabButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // Remove active from buttons
+          tabButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          // Show corresponding tab content
+          const target = btn.getAttribute("data-tab");
+          tabContents.forEach((content) => {
+            if (content.id === target) {
+              content.classList.add("active");
+            } else {
+              content.classList.remove("active");
+            }
+          });
+        });
+      });
+    </script>
+    <script src="trail.js"></script>
+  </body>
 </html>

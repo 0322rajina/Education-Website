@@ -1,185 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Education Website</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">EduPlatform</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="Join.html">Join</a></li>
-                <li> <a href="Contact.html">Contact us</a></li>
-                <li><a href="Team.html">Team</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="Resources.html">Resources</a></li>
-                <li><a href="Faq.html">FAQ</a></li>
-                <li><a href="Blog.html">Blog</a></li>
-                <li><a href="Gallery.html">Gallery</a></li>
-                <li><a href="Login.html">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-     <div class="intro-image">
-            <img src="Images/background.jpg" alt="Education Image">
-        </div>
-    <section class="content">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <canvas id="trail"></canvas>
 
-       <h1>Welcome to Our Education</h1>
-        <p>Empowering learners and educators with quality resources, expert guidance, and a vibrant academic community.</p>
+    <!-- ===== Header ===== -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <span class="edu">Edu</span><span class="academy">Academy</span>
+        </div>
+
+        <!-- Hamburger Button -->
+        <div class="hamburger">&#9776;</div>
+
+        <ul class="nav-links">
+          <!-- First 5 visible links -->
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="Events.html">Events</a></li>
+          <li><a href="Join.html">Join/Sign Up</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="Contact.html">Contact Us</a></li>
+          <li><a href="Login.html">Login</a></li>
+
+          <!-- Rest inside dropdown -->
+          <li class="dropdown">
+            <a href="#">More ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="Courses.html">Courses</a></li>
+              <li><a href="Team.html">Team</a></li>
+              <li><a href="Resources.html">Resources</a></li>
+              <li><a href="Faq.html">FAQ</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== Hero Section ===== -->
+    <section class="hero">
+      <img src="Images/background.jpg" alt="Education Image" />
+      <div class="hero-text">
+        <h1>Welcome to Our Education Platform</h1>
+        <p>
+          Empowering learners and educators with quality resources, expert
+          guidance, and a vibrant academic community.
+        </p>
         <div class="cta-buttons">
-              <a href="Resources.html" class="btn">Browse Resource</a>
-              <a href="Team.html" class="btn secondary">Meet the Team</a>
-        </div>    
+          <a href="Resources.html" class="btn">Browse Resources</a>
+          <a href="Team.html" class="btn secondary">Meet the Team</a>
+        </div>
+      </div>
     </section>
-    <!---Features---->
+
+    <!-- ===== Features ===== -->
     <section class="features">
-        <div class="feature">
-            <h3>📘 Rich Educational Resources</h3>
-            <p>Access a vast library of textbooks, articles, and multimedia content across various subjects and educational levels.</p>
-        </div>
-        <div class="feature">
-            <h3>👩‍🏫 Expert Team </h3>
-            <p>Learn from experienced educators, researchers, and industry professionals dedicated to providing high-quality education.</p>
-        </div>
-        <div class="feature">
-            <h3>🌐 Interactive Learning Community</h3>
-            <p>Join forums, discussion groups, and live webinars to connect with peers and experts, fostering collaboration and knowledge sharing.</p>
-        </div>
-        <div class="feature">
-            <h3>🎓 Personalized Learning paths</h3>
-            <p>Customize your learning experience with tailored recommendations, progress tracking, and adaptive learning technologies.</p>
-        </div>
-        <div class="feature">
-            <h3>🖼️ Gallery</h3>
-            <p>Explore our gallery showcasing educational events, student projects, and community highlights.</p>
-        </div>
+      <div class="feature">📘 Rich Resources</div>
+      <div class="feature">👩‍🏫 Expert Team</div>
+      <div class="feature">🌐 Learning Community</div>
+      <div class="feature">🎓 Personalized Paths</div>
+      <div class="feature">🖼️ Gallery</div>
     </section>
-    <!----How to get started--->
+
+    <!-- ===== Courses ===== -->
+    <section class="courses">
+      <h2>Our Courses</h2>
+      <div class="course-grid">
+        <div class="course-card">
+          <h3>📱 App Design</h3>
+          <p>24 Courses</p>
+        </div>
+        <div class="course-card">
+          <h3>💻 Development</h3>
+          <p>57 Courses</p>
+        </div>
+        <div class="course-card">
+          <h3>🎨 UI/UX Design</h3>
+          <p>103 Courses</p>
+        </div>
+        <div class="course-card">
+          <h3>📷 Photography</h3>
+          <p>17 Courses</p>
+        </div>
+        <div class="course-card">
+          <h3>💰 Finance</h3>
+          <p>17 Courses</p>
+        </div>
+        <div class="course-card">
+          <h3>🔬 Science</h3>
+          <p>17 Courses</p>
+        </div>
+        <div class="course-card">
+          <h3>🔒 Cyber Security</h3>
+          <p>23 Courses</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== How To Get Started ===== -->
     <section class="get-started">
-        <h2>How to Get Started</h2>
-        <p>Getting started with EduPlatform is easy. Follow these simple steps to embark on your educational journey:</p>
-        <ol>
-            <li><strong>Sign Up:</strong> Create an account by clicking on the "Join" link in the navigation bar. Fill in your details and set up your profile.</li>
-            <li><strong>Explore Resources:</strong> Navigate to the "Resources" section to browse our extensive library of educational materials. Use filters to find content that suits your interests and needs.</li>
-            <li><strong>Connect with the Team:</strong> Visit the "Team" page to learn more about our experts and educators. Reach out to them for guidance, mentorship, or collaboration opportunities.</li>
-            <li><strong>Join the Community:</strong> Participate in forums, discussion groups, and live webinars to engage with fellow learners and experts. Share your knowledge and learn from others.</li>
-            <li><strong>Track Your Progress:</strong> Use our personalized learning paths to monitor your progress, set goals, and receive tailored recommendations based on your learning journey.</li>
-            <li><strong>Stay Updated:</strong> Follow our blog for the latest news, articles, and insights on education trends, tips, and success stories.</li>
-        </ol>
+      <h2>How to Get Started</h2>
+      <ol>
+        <li><strong>Sign Up:</strong> Create an account via "Join".</li>
+        <li><strong>Explore Resources:</strong> Browse the library.</li>
+        <li><strong>Connect with Team:</strong> Visit the Team page.</li>
+        <li><strong>Join the Community:</strong> Forums & webinars.</li>
+        <li><strong>Track Progress:</strong> Personalized learning paths.</li>
+        <li><strong>Stay Updated:</strong> Follow our blog.</li>
+      </ol>
     </section>
-    <!---Testimonials Sections-->
+
+    <!-- ===== Testimonials Carousel ===== -->
     <section class="testimonials">
-        <span class="testimonial">Testimonials</span>
-        <h2>What Our Community Says</h2>
-        <div class="testimonial-item">
-            <div class="testimonial-content">
-                <p>"EduPlatform has transformed my learning experience. The resources are top-notch, and the community is incredibly supportive!"</p>
-                <h4>- Sakti Jang Rai, Student</h4>
-                <div class="testimonial-image">
-                    <img src="Images/Sakti.jpeg" alt="Sakti Jang Rai">
-                </div>
-                <div class="testimonial-rating">
-                    <span>⭐⭐⭐⭐⭐</span>
-                </div>
-            </div>
-            <div class="testimonial-content">
-                <p>"The expert team at EduPlatform has been instrumental in my academic success. Their guidance and resources are invaluable!"</p>
-                <h4>-Dhiraj Thapa , Student </h4>
-                <div class="testimonial-image">
-                    <img src="Images/Dhiraj.png" alt="Dhiraj Thapa">
-                </div>
-                <div class="testimonial-rating">
-                    <span>⭐⭐⭐⭐⭐</span>
-                </div>
-            </div>
-            <div class="testimonial-content">
-                <p>"I love the interactive learning community at EduPlatform. It's a great place to connect with like-minded individuals and share knowledge!"</p>
-                <h4>- Sita Gurung, Mentors</h4>
-                <div class="testimonial-image">
-                    <img src="Images/Sita.jpg" alt="Sita Gurung">
-                </div>
-                <div class="testimonial-rating">
-                    <span>⭐⭐⭐⭐⭐</span>
-                </div>
-            </div>
-            <div class="testimonial-content">
-                <p>"EduPlatform's personalized learning paths have helped me stay organized and focused on my goals. Highly recommend!"</p>
-                <h4>- Smith Dhungana, Lecturer</h4>
-                <div class="testimonial-image">
-                    <img src="Images/Smith.jpeg" alt="Smith Dhungana">
-                </div>
-                <div class="testimonial-rating">
-                    <span>⭐⭐⭐⭐⭐</span>
-                </div>
-            </div>
-            <div class="testimonial-content">
-                <p>"The gallery section is a fantastic way to showcase our achievements and events. It brings the community together!"</p>
-                <h4>- Pratiksha Rai, Student</h4>
-                <div class="testimonial-image">
-                    <img src="Images/Praktiksha.jpeg" alt="Pratiksha Rai">
-                </div>
-                <div class="testimonial-rating">
-                    <span>⭐⭐⭐⭐⭐</span>
-                </div>
-            </div>
-            <div class="testimonial-content">
-                <p>"EduPlatform has been a game-changer for my education. The resources are diverse, and the support from the team is exceptional!"</p>
-                <h4>- Ramesh Thapa, Student</h4>
-                <div class="testimonial-image">
-                    <img src="Images/Ramesh.jpeg" alt="Ramesh Thapa">
-                </div>
-                <div class="testimonial-rating">
-                    <span>⭐⭐⭐⭐⭐</span>
-                </div>
-            </div>
-            <div class="testimonial-content">
-                <p>"I appreciate the effort put into creating a user-friendly platform. It's easy to navigate and find what I need!"</p>
-                <h4>- Anjali Gurung, Student</h4>
-                <div class="testimonial-image">
-                    <img src="Images/Anjali.jpeg" alt="Anjali Gurung">
-                </div>
-                <div class="testimonial-rating">
-                    <span>⭐⭐⭐⭐⭐</span>
-                </div>
-            </div>
-            <div class="testimonial-content">
-                <p>"The webinars and live sessions are fantastic! They provide real-time interaction with experts and enhance the learning experience."</p>
-                <h4>- Rajesh Rai, Student</h4>
-                <div class="testimonial-image">
-                    <img src="Images/Rajesh.jpeg" alt="Rajesh Rai">
-                </div>
-                <div class="testimonial-rating">
-                    <span>⭐⭐⭐⭐⭐</span>
-                </div>
-            </div>
-            <div class="testimonial-content">
-                <p>"EduPlatform's commitment to quality education is evident in every aspect. I'm grateful to be a part of this community!"</p>
-                <h4>- Maya Thapa, Student</h4>
-                <div class="testimonial-image">
-                    <img src="Images/Maya.jpeg" alt="Maya Thapa">
-                </div>
-                <div class="testimonial-rating">
-                    <span>⭐⭐⭐⭐⭐</span>
-                </div>
+      <h2>What Our Community Says</h2>
+      <div class="testimonial-carousel">
+        <div class="testimonial-slide active">
+          <div class="testimonial-image">
+            <img src="Images/Sakti.jpeg" alt="Sakti" />
+          </div>
+          <p>"EduPlatform transformed my learning experience!"</p>
+          <h4>- Sakti Jang Rai</h4>
+          <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
         </div>
-    </section>
-    <section class="ready">
-        <h2>Ready to Join Our Academic Community?</h2>
-        <p>Sign up to access exclusive resources, connect with our team, and contribute to a thriving educational environment.</p>
-        <div class="ready-btn">
-            <a href="Join.html" class="btn">Join Now</a>
-            <a href="Blog.html" class="btn secondary">Read Our Blog</a>
+
+        <div class="testimonial-slide">
+          <div class="testimonial-image">
+            <img src="Images/Dhiraj.png" alt="Dhiraj" />
+          </div>
+          <p>"The expert team has been instrumental in my success."</p>
+          <h4>- Dhiraj Thapa</h4>
+          <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
         </div>
+
+        <div class="testimonial-slide">
+          <div class="testimonial-image">
+            <img src="Images/Sita.jpg" alt="Sita" />
+          </div>
+          <p>"I love the interactive learning community!"</p>
+          <h4>- Sita Gurung</h4>
+          <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+        </div>
+
+        <div class="testimonial-slide">
+          <div class="testimonial-image">
+            <img src="Images/Smith.jpeg" alt="Smith" />
+          </div>
+          <p>"Personalized learning paths keep me focused."</p>
+          <h4>- Smith Dhungana</h4>
+          <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+
+      <div class="testimonial-nav">
+        <button class="prev">⟨</button>
+        <div class="dots">
+          <span class="dot active-dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <button class="next">⟩</button>
+      </div>
     </section>
-    <footer class="footer">
-        <p>&copy; 2023 EduAcademy. All rights reserved.</p> 
+
+    <!-- ===== Events ===== -->
+    <section class="events">
+      <h2>Upcoming Events</h2>
+      <div class="event-list">
+        <div class="event">
+          <h3>AI in Education</h3>
+          <p>Sept 15, 2025 - 5:00 PM</p>
+        </div>
+        <div class="event">
+          <h3>UI/UX Basics</h3>
+          <p>Oct 5, 2025 - 2:00 PM</p>
+        </div>
+        <div class="event">
+          <h3>Cyber Security Hackathon</h3>
+          <p>Nov 12, 2025 - 9:00 AM</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Latest News / Blog Preview ===== -->
+    <section class="latest-news">
+      <h2>Latest News</h2>
+      <div class="news-grid">
+        <div class="news-card">
+          <img src="Images/Blog 1.jpeg" alt="Blog 1" />
+          <h3>AI in Modern Education</h3>
+          <p>Discover how AI is transforming learning...</p>
+          <a href="Blog.html" class="btn">Read More</a>
+        </div>
+        <div class="news-card">
+          <img src="Images/Blog 2.jpeg" alt="Blog 2" />
+          <h3>Top 10 Study Tips</h3>
+          <p>Boost your productivity and learn smarter...</p>
+          <a href="Blog.html" class="btn">Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Gallery ===== -->
+    <section class="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="Images/gallery 1.jpg" alt="Activity 1" />
+        <img src="Images/gallery 2.jpg" alt="Activity 2" />
+        <img src="Images/gallery 3.jpg" alt="Activity 3" />
+        <img src="Images/gallery 4.jpg" alt="Activity 4" />
+        <img src="Images/gallery 5.jpg" alt="Activity 5" />
+        <img src="Images/gallery 6.jpg" alt="Activity 6" />
+        <img src="Images/Member 7.jpeg" alt="Activity 7" />
+      </div>
+    </section>
+
+    <!-- ===== Statistics / Counters ===== -->
+    <section class="stats">
+      <div class="stat">
+        <h3 class="counter" data-target="5000">0</h3>
+        <p>Students</p>
+      </div>
+      <div class="stat">
+        <h3 class="counter" data-target="100">0</h3>
+        <p>Courses</p>
+      </div>
+      <div class="stat">
+        <h3 class="counter" data-target="95">0</h3>
+        <p>Events</p>
+      </div>
+    </section>
+
+    <!-- ===== Newsletter ===== -->
+    <section class="newsletter">
+      <h2>Subscribe to Our Newsletter</h2>
+      <form>
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </section>
+
+    <!----Footer Section---->
+    <footer class="main-footer">
+      <div class="footer-container">
+        <!-- Logo & About -->
+        <div class="footer-col">
+          <h2 class="footer-logo">🎓 EDUBIN</h2>
+          <p>
+            EDUBIN is a modern learning platform that provides quality education
+            resources, expert-led courses, and community-driven events to
+            empower students worldwide.
+          </p>
+          <!-- Social Media Icons -->
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://youtube.com" target="_blank"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="https://linkedin.com" target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://instagram.com" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Sitemap -->
+        <div class="footer-col">
+          <h3>Sitemap</h3>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="Join.html">Join</a></li>
+            <li><a href="Contact.html">Contact us</a></li>
+            <li><a href="Team.html">Team</a></li>
+            <li><a href="Courses.html">Courses</a></li>
+            <li><a href="Resources.html">Resources</a></li>
+            <li><a href="Events.html">Events</a></li>
+            <li><a href="Faq.html">FAQ</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="SignUp.html">Sign Up</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul class="nav-links">
+            <li><a href="Faq.html">FAQs</a></li>
+            <li><a href="#">Privacy & Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Documentation</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <p>
+            <i class="fas fa-home"></i> 123 Learning Street, New Baneshwor,
+            Kathmandu
+          </p>
+          <p><i class="fas fa-phone"></i> +1 (647) 123-4567, +9779716345689</p>
+          <p><i class="fas fa-envelope"></i> support@edubin.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 EDUBIN. All Rights Reserved.</p>
+      </div>
     </footer>
+
     <script src="script.js"></script>
-</body>
+    <script src="trail.js"></script>
+  </body>
 </html>
