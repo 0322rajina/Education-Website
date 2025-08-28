@@ -5,6 +5,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     margin-bottom: 60px;
+    margin-top: 20px;
 }
 
 .contact-info {
@@ -132,7 +133,7 @@
 }
 
 .submit-btn {
-    background:#F1C40F ;
+    background: #F1C40F;
     color: white;
     border: none;
     padding: 16px 40px;
@@ -257,7 +258,7 @@
 }
 
 .direction-btn {
-    background:#2e7d32;
+    background: #2e7d32;
     color: white;
 }
 
@@ -268,7 +269,7 @@
 }
 
 .tour-btn {
-    background:#07294d ;
+    background: #07294d;
     color: white;
 }
 
@@ -335,8 +336,9 @@
 .team-preview {
     margin-bottom: 60px;
 }
-.team-preview h2{
-    color:black;
+
+.team-preview h2 {
+    color: black;
 }
 
 .team-grid {
@@ -429,7 +431,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     z-index: 1000;
     justify-content: center;
     align-items: center;
@@ -477,15 +479,15 @@ footer {
     .contact-section {
         grid-template-columns: 1fr;
     }
-    
+
     .additional-features {
         grid-template-columns: 1fr 1fr;
     }
-    
+
     .faq-container {
         grid-template-columns: 1fr;
     }
-    
+
     .team-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -497,26 +499,27 @@ footer {
         text-align: center;
         gap: 20px;
     }
-    
+
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
     }
-    
+
     .additional-features {
         grid-template-columns: 1fr;
     }
-    
+
     .map-actions {
         flex-direction: column;
         align-items: center;
     }
-    
-    .contact-info, .contact-form {
+
+    .contact-info,
+    .contact-form {
         padding: 30px;
     }
-    
+
     .team-grid {
         grid-template-columns: 1fr;
     }
@@ -526,20 +529,20 @@ footer {
     .contact-info h2 {
         font-size: 28px;
     }
-    
+
     .form-title {
         font-size: 24px;
     }
-    
+
     .section-title {
         font-size: 28px;
     }
-    
+
     .contact-item {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .contact-icon {
         margin-right: 0;
         margin-bottom: 10px;

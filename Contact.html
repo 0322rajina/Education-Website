@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Education Website</title>
-    <link rel="stylesheet" href="CSS/contact.css">
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
-<body>
-     <canvas id="trail"></canvas>
+    <link rel="stylesheet" href="CSS/contact.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+
+  <body>
+    <canvas id="trail"></canvas>
 
     <!-- ===== Header ===== -->
     <header>
@@ -21,341 +22,440 @@
         <div class="hamburger">&#9776;</div>
 
         <ul class="nav-links">
-          <!-- First 5 visible links -->
+          <!-- First 6 visible links -->
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About us</a></li>
           <li><a href="Courses.html">Courses</a></li>
           <li><a href="Events.html">Events</a></li>
           <li><a href="Join.html">Join/Login</a></li>
-          <li><a href="Blog.html">Blog</a></li>
           <li><a href="Contact.html">Contact Us</a></li>
 
           <!-- Rest inside dropdown -->
           <li class="dropdown">
             <a href="#">More ▼</a>
             <ul class="dropdown-menu">
+              <li><a href="Blog.html">Blog</a></li>
               <li><a href="Gallery.html">Gallery</a></li>
               <li><a href="Team.html">Team</a></li>
               <li><a href="Resources.html">Resources</a></li>
               <li><a href="Faq.html">FAQ</a></li>
+              <li><a href="Payment.html">Payment</a></li>
             </ul>
           </li>
         </ul>
       </nav>
     </header>
-    
-        <section class="contact-section">
-            <div class="contact-info">
-                <h2>CONTACT EDUPLATFORM</h2>
-                <p>We're here to support your educational journey! At EduPlatform, we believe in empowering learners and educators with quality resources and expert guidance. Reach out to us with any questions or inquiries.</p>
-                
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Our Location</h4>
-                            <p>123 Education Street,New Bane, Katmandu</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Call Us</h4>
-                            <p>+1 (647) 123-4567, +9779716345689</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Email Us</h4>
-                            <p>support@eduplatform.com</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Support Hours</h4>
-                            <p>Mon-Fri: 8:00 AM - 8:00 PM EST<br>Sat-Sun: 10:00 AM - 6:00 PM EST</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="contact-form">
-                <h2 class="form-title">Get In Touch</h2>
-                <p class="form-subtitle">Have questions about our resources, courses, or services? We're here to help.</p>
-                
-                <form id="contactForm">
-                    <div class="input-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                    </div>
-                    
-                    <div class="input-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                    </div>
-                    
-                    <div class="input-group">
-                        <label for="category">Inquiry Category</label>
-                        <select id="category" name="category" required>
-                            <option value="">Select a category</option>
-                            <option value="resources">Educational Resources</option>
-                            <option value="courses">Online Courses</option>
-                            <option value="technical">Technical Support</option>
-                            <option value="billing">Billing Inquiry</option>
-                            <option value="partnership">Partnership Opportunities</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="input-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
-                </form>
-            </div>
-        </section>
 
-        <!-- Additional Features Section -->
-        <div class="additional-features">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-book-open"></i>
-                </div>
-                <h3>Learning Resources</h3>
-                <p>Access our extensive library of textbooks, articles, and multimedia content across various subjects and educational levels.</p>
+    <section class="contact-section">
+      <div class="contact-info">
+        <h2>CONTACT EDUPLATFORM</h2>
+        <p>
+          We're here to support your educational journey! At EduPlatform, we
+          believe in empowering learners and educators with quality resources
+          and expert guidance. Reach out to us with any questions or inquiries.
+        </p>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
             </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                </div>
-                <h3>Expert Instructors</h3>
-                <p>Connect with experienced educators, researchers, and industry professionals dedicated to providing high-quality education.</p>
+            <div class="contact-text">
+              <h4>Our Location</h4>
+              <p>123 Education Street,New Bane, Katmandu</p>
             </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <h3>Community Forums</h3>
-                <p>Join our interactive learning community with forums, discussion groups, and live webinars to connect with peers and experts.</p>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
             </div>
+            <div class="contact-text">
+              <h4>Call Us</h4>
+              <p>+1 (647) 123-4567, +9779716345689</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Email Us</h4>
+              <p>support@eduplatform.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Support Hours</h4>
+              <p>
+                Mon-Fri: 8:00 AM - 8:00 PM EST<br />Sat-Sun: 10:00 AM - 6:00 PM
+                EST
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h2 class="form-title">Get In Touch</h2>
+        <p class="form-subtitle">
+          Have questions about our resources, courses, or services? We're here
+          to help.
+        </p>
+
+        <form id="contactForm">
+          <div class="input-group">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email address"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="category">Inquiry Category</label>
+            <select id="category" name="category" required>
+              <option value="">Select a category</option>
+              <option value="resources">Educational Resources</option>
+              <option value="courses">Online Courses</option>
+              <option value="technical">Technical Support</option>
+              <option value="billing">Billing Inquiry</option>
+              <option value="partnership">Partnership Opportunities</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Type your message here..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            Send Message <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Additional Features Section -->
+    <div class="additional-features">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-book-open"></i>
+        </div>
+        <h3>Learning Resources</h3>
+        <p>
+          Access our extensive library of textbooks, articles, and multimedia
+          content across various subjects and educational levels.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-chalkboard-teacher"></i>
+        </div>
+        <h3>Expert Instructors</h3>
+        <p>
+          Connect with experienced educators, researchers, and industry
+          professionals dedicated to providing high-quality education.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3>Community Forums</h3>
+        <p>
+          Join our interactive learning community with forums, discussion
+          groups, and live webinars to connect with peers and experts.
+        </p>
+      </div>
+    </div>
+
+    <!-- Team Preview Section -->
+    <section class="team-preview">
+      <h2 class="section-title">Meet Our Expert Team</h2>
+      <p style="text-align: center; margin-bottom: 30px; color: #666">
+        Our dedicated educators and professionals are committed to providing
+        quality education and support.
+      </p>
+
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="member-image">
+            <img
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+              alt="Dr. Sarah Johnson"
+            />
+          </div>
+          <div class="member-info">
+            <h3>Dr. Sarah Johnson</h3>
+            <p>Head of Curriculum Development</p>
+          </div>
         </div>
 
-        <!-- Team Preview Section -->
-        <section class="team-preview">
-            <h2 class="section-title">Meet Our Expert Team</h2>
-            <p style="text-align: center; margin-bottom: 30px; color: #666;">Our dedicated educators and professionals are committed to providing quality education and support.</p>
-            
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dr. Sarah Johnson">
-                    </div>
-                    <div class="member-info">
-                        <h3>Dr. Sarah Johnson</h3>
-                        <p>Head of Curriculum Development</p>
-                    </div>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Michael Chen">
-                    </div>
-                    <div class="member-info">
-                        <h3>Michael Chen</h3>
-                        <p>Senior Science Instructor</p>
-                    </div>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Priya Sharma">
-                    </div>
-                    <div class="member-info">
-                        <h3>Priya Sharma</h3>
-                        <p>Mathematics Department Lead</p>
-                    </div>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="David Wilson">
-                    </div>
-                    <div class="member-info">
-                        <h3>David Wilson</h3>
-                        <p>Technology and Innovation Director</p>
-                    </div>
-                </div>
-            </div>
-            
-            <a href="Team.html" class="view-all-btn">View All Team Members</a>
-        </section>
+        <div class="team-member">
+          <div class="member-image">
+            <img
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+              alt="Michael Chen"
+            />
+          </div>
+          <div class="member-info">
+            <h3>Michael Chen</h3>
+            <p>Senior Science Instructor</p>
+          </div>
+        </div>
 
-        <!-- Map Section -->
-        <section class="map-section">
-            <h2 class="section-title">Our Global Learning Hub</h2>
-            
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.11976397304613!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1690845362884!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            
-            <div class="map-actions">
-                <a href="https://maps.google.com/?q=EduPlatform+New+York" target="_blank" class="action-btn direction-btn">
-                    <i class="fas fa-directions"></i> Get Directions
-                </a>
-                <a href="#" class="action-btn tour-btn" id="virtualTourBtn">
-                    <i class="fas fa-video"></i> Virtual Campus Tour
-                </a>
-            </div>
-        </section>
+        <div class="team-member">
+          <div class="member-image">
+            <img
+              src="https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+              alt="Priya Sharma"
+            />
+          </div>
+          <div class="member-info">
+            <h3>Priya Sharma</h3>
+            <p>Mathematics Department Lead</p>
+          </div>
+        </div>
 
-        <!-- FAQ Section -->
-        <section class="faq-section">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How do I access the educational resources?</span>
-                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>You can browse our extensive library of resources by visiting the Resources section. Once you create an account, you'll have access to textbooks, articles, and multimedia content across various subjects and educational levels.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Are there personalized learning paths available?</span>
-                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes! EduPlatform offers personalized learning experiences with tailored recommendations, progress tracking, and adaptive learning technologies. After signing up, you can set your learning goals and preferences to receive customized content suggestions.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How can I join the interactive learning community?</span>
-                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>After creating an account, you can participate in our forums, discussion groups, and live webinars. Visit the Community section to see upcoming events and join conversations with peers and experts.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What support options are available for technical issues?</span>
-                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Our technical support team is available during business hours to assist with any platform issues. You can reach out through this contact form, email us at support@eduplatform.com, or check our Help Center for troubleshooting guides.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="team-member">
+          <div class="member-image">
+            <img
+              src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+              alt="David Wilson"
+            />
+          </div>
+          <div class="member-info">
+            <h3>David Wilson</h3>
+            <p>Technology and Innovation Director</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="Team.html" class="view-all-btn">View All Team Members</a>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <h2 class="section-title">Our Global Learning Hub</h2>
+
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.11976397304613!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1690845362884!5m2!1sen!2s"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <div class="map-actions">
+        <a
+          href="https://maps.google.com/?q=EduPlatform+New+York"
+          target="_blank"
+          class="action-btn direction-btn"
+        >
+          <i class="fas fa-directions"></i> Get Directions
+        </a>
+        <a href="#" class="action-btn tour-btn" id="virtualTourBtn">
+          <i class="fas fa-video"></i> Virtual Campus Tour
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How do I access the educational resources?</span>
+            <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              You can browse our extensive library of resources by visiting the
+              Resources section. Once you create an account, you'll have access
+              to textbooks, articles, and multimedia content across various
+              subjects and educational levels.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Are there personalized learning paths available?</span>
+            <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Yes! EduPlatform offers personalized learning experiences with
+              tailored recommendations, progress tracking, and adaptive learning
+              technologies. After signing up, you can set your learning goals
+              and preferences to receive customized content suggestions.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How can I join the interactive learning community?</span>
+            <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              After creating an account, you can participate in our forums,
+              discussion groups, and live webinars. Visit the Community section
+              to see upcoming events and join conversations with peers and
+              experts.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span
+              >What support options are available for technical issues?</span
+            >
+            <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Our technical support team is available during business hours to
+              assist with any platform issues. You can reach out through this
+              contact form, email us at support@eduplatform.com, or check our
+              Help Center for troubleshooting guides.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Virtual Tour Modal -->
     <div id="virtualTourModal" class="modal">
-        <div class="modal-content">
-            <h2>Virtual Campus Tour</h2>
-            <p>Our virtual tour allows you to explore our digital learning environment and resources:</p>
-            <ul>
-                <li>Interactive learning platform demo</li>
-                <li>Virtual classroom experience</li>
-                <li>Resource library overview</li>
-                <li>Community engagement spaces</li>
-            </ul>
-            <p>Our virtual tour is currently being enhanced. Please check back soon or contact us to schedule a personalized platform demonstration.</p>
-            <button id="closeModalBtn">Close</button>
-        </div>
+      <div class="modal-content">
+        <h2>Virtual Campus Tour</h2>
+        <p>
+          Our virtual tour allows you to explore our digital learning
+          environment and resources:
+        </p>
+        <ul>
+          <li>Interactive learning platform demo</li>
+          <li>Virtual classroom experience</li>
+          <li>Resource library overview</li>
+          <li>Community engagement spaces</li>
+        </ul>
+        <p>
+          Our virtual tour is currently being enhanced. Please check back soon
+          or contact us to schedule a personalized platform demonstration.
+        </p>
+        <button id="closeModalBtn">Close</button>
+      </div>
     </div>
 
-      <!----Footer Section---->
+    <!----Footer Section---->
     <footer class="main-footer">
-        <div class="footer-container">
-            <!-- Logo & About -->
-            <div class="footer-col">
-                <h2 class="footer-logo">🎓 EDUBIN</h2>
-                <p>
-                    EDUBIN is a modern learning platform that provides quality education
-                    resources, expert-led courses, and community-driven events to
-                    empower students worldwide.
-                </p>
-                <!-- Social Media Icons -->
-                <div class="footer-social">
-                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-
-            <!-- Sitemap -->
-            <div class="footer-col">
-                <h3>Sitemap</h3>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About us</a></li>
-                    <li><a href="Join.html">Join/Login</a></li>
-                    <li><a href="Contact.html">Contact us</a></li>
-                    <li><a href="Team.html">Team</a></li>
-                    <li><a href="Courses.html">Courses</a></li>
-                    <li><a href="Resources.html">Resources</a></li>
-                    <li><a href="Events.html">Events</a></li>
-                    <li><a href="Faq.html">FAQ</a></li>
-                    <li><a href="Blog.html">Blog</a></li>
-                    <li><a href="Gallery.html">Gallery</a></li>
-                </ul>
-            </div>
-
-            <!-- Support -->
-            <div class="footer-col">
-                <h3>Support</h3>
-                <ul class="nav-links">
-                    <li><a href="Faq.html">FAQs</a></li>
-                    <li><a href="#">Privacy & Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Documentation</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="footer-col">
-                <h3>Contact Us</h3>
-                <p>
-                    <i class="fas fa-home"></i> 123 Learning Street, New Baneshwor,
-                    Kathmandu
-                </p>
-                <p><i class="fas fa-phone"></i> +1 (647) 123-4567, +9779716345689</p>
-                <p><i class="fas fa-envelope"></i> support@edubin.com</p>
-            </div>
+      <div class="footer-container">
+        <!-- Logo & About -->
+        <div class="footer-col">
+          <h2 class="footer-logo">🎓 EDUBIN</h2>
+          <p>
+            EDUBIN is a modern learning platform that provides quality education
+            resources, expert-led courses, and community-driven events to
+            empower students worldwide.
+          </p>
+          <!-- Social Media Icons -->
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://youtube.com" target="_blank"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="https://linkedin.com" target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://instagram.com" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
         </div>
 
-        <div class="footer-bottom">
-            <p>&copy; 2025 EDUBIN. All Rights Reserved.</p>
+        <!-- Sitemap -->
+        <div class="footer-col">
+          <h3>Sitemap</h3>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="Join.html">Join/Login</a></li>
+            <li><a href="Contact.html">Contact us</a></li>
+            <li><a href="Team.html">Team</a></li>
+            <li><a href="Courses.html">Courses</a></li>
+            <li><a href="Resources.html">Resources</a></li>
+            <li><a href="Events.html">Events</a></li>
+            <li><a href="Faq.html">FAQ</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Payment.html">Payment</a></li>
+          </ul>
         </div>
+
+        <!-- Support -->
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul class="nav-links">
+            <li><a href="Faq.html">FAQs</a></li>
+            <li><a href="#">Privacy & Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Documentation</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <p>
+            <i class="fas fa-home"></i> 123 Learning Street, New Baneshwor,
+            Kathmandu
+          </p>
+          <p><i class="fas fa-phone"></i> +1 (647) 123-4567, +9779716345689</p>
+          <p><i class="fas fa-envelope"></i> support@edubin.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 EDUBIN. All Rights Reserved.</p>
+      </div>
     </footer>
 
     <script src="JavaScript/contact.js"></script>
     <script src="JavaScript/trail.js"></script>
     <script src="JavaScript/script.js"></script>
-</body>
+  </body>
 </html>

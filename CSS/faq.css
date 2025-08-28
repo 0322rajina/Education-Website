@@ -1,23 +1,101 @@
 /* Hero */
-.hero {background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); background-size:cover; background-position:center; color:white; padding:6rem 0; text-align:center;}
-.hero h2 {font-size:3rem;color:white;}
-.hero p {font-size:1.2rem; max-width:800px; margin:0 auto 2rem;}
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 6rem 0;
+    text-align: center;
+
+}
+
+.hero h2 {
+    font-size: 3rem;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
 
 /* FAQ Section */
-.faq {padding:5rem 0;}
-.section-title {text-align:center; margin-bottom:3rem; position:relative;}
-.section-title:after {content:''; position:absolute; width:80px; height:3px; background-color:var(--accent); bottom:-10px; left:50%; transform:translateX(-50%);}
-.accordion {max-width:800px; margin:0 auto;}
-.accordion-item {background:white; border-radius:10px; margin-bottom:1rem; box-shadow:0 5px 15px rgba(0,0,0,0.1); overflow:hidden; transition:var(--transition);}
-.accordion-header {padding:1.5rem; cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-weight:600; color:var(--primary);}
-.accordion-header i {transition:var(--transition);}
-.accordion-content {max-height:0; padding:0 1.5rem; overflow:hidden; background:#f8f8f8; transition:max-height 0.3s ease, padding 0.3s ease;}
-.accordion-content p {margin:1rem 0; color:var(--text-light);}
-.accordion-item.active .accordion-content {max-height:300px; padding:1rem 1.5rem;}
-.accordion-item.active .accordion-header i {transform:rotate(180deg);}
-.hero .container h2 {
-    color:white;
+.faq {
+    padding: 5rem 0;
 }
-.hero .container p{
-    color:white;
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.accordion-header {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.accordion-header i {
+    transition: var(--transition);
+}
+
+.accordion-content {
+    max-height: 0;
+    padding: 0 1.5rem;
+    overflow: hidden;
+    background: #f8f8f8;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-content p {
+    margin: 1rem 0;
+    color: var(--text-light);
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 300px;
+    padding: 1rem 1.5rem;
+}
+
+.accordion-item.active .accordion-header i {
+    transform: rotate(180deg);
+}
+
+.hero .container h2 {
+    color: white;
+}
+
+.hero .container p {
+    color: white;
 }

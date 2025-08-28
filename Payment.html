@@ -9,12 +9,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="CSS/join.css" />
+    <link rel="stylesheet" href="CSS/payment.css" />
     <link rel="stylesheet" href="CSS/style.css" />
-    <style></style>
   </head>
 
   <body>
@@ -54,178 +53,147 @@
         </ul>
       </nav>
     </header>
+    <div class="payment-container">
+      <!-- Order Summary -->
+      <div class="order-summary">
+        <div class="header">
+          <h1>Complete Your Purchase</h1>
+          <p>Secure payment with encryption</p>
+        </div>
 
-    <!-- Login Form Container -->
-    <div class="container">
-      <div class="header">
-        <h1>Welcome to EduPlatform</h1>
-        <p>Access exclusive resources and learning materials</p>
+        <div class="course-card">
+          <div class="course-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="course-details">
+            <h3>Advanced Web Development</h3>
+            <p>12-week comprehensive course</p>
+          </div>
+        </div>
+
+        <div class="benefits">
+          <h3>What's Included</h3>
+          <div class="benefit-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Lifetime access to course materials</span>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Certificate of completion</span>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-check-circle"></i>
+            <span>24/7 support</span>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Downloadable resources</span>
+          </div>
+        </div>
+
+        <div class="price-details">
+          <div class="price-row">
+            <span>Course Price</span>
+            <span>$129.99</span>
+          </div>
+          <div class="price-row">
+            <span>Tax</span>
+            <span>$13.00</span>
+          </div>
+          <div class="price-row total">
+            <span>Total</span>
+            <span>$142.99</span>
+          </div>
+        </div>
       </div>
 
-      <div class="form-toggle">
-        <button class="toggle-btn active" id="login-toggle">Login</button>
-        <button class="toggle-btn" id="signup-toggle">Sign Up</button>
-      </div>
+      <!-- Payment Form -->
+      <div class="payment-form">
+        <h2 class="section-title">Payment Details</h2>
 
-      <div class="form-container">
-        <!-- Login Form -->
-        <form id="login-form" class="auth-form active">
+        <div class="payment-methods">
+          <div class="payment-method active">
+            <i class="fas fa-credit-card"></i>
+            <p>Credit Card</p>
+          </div>
+          <div class="payment-method">
+            <i class="fab fa-paypal"></i>
+            <p>PayPal</p>
+          </div>
+          <div class="payment-method">
+            <i class="fas fa-university"></i>
+            <p>Bank Transfer</p>
+          </div>
+        </div>
+
+        <form id="payment-form">
           <div class="form-group">
-            <label for="login-email">Email Address</label>
-            <div class="input-with-icon">
-              <div class="input-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <input
-                type="email"
-                id="login-email"
-                placeholder="Enter your email address"
-                required
-              />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="login-password">Password</label>
-            <div class="input-with-icon">
-              <div class="input-icon">
-                <i class="fas fa-lock"></i>
-              </div>
-              <input
-                type="password"
-                id="login-password"
-                placeholder="Enter your password"
-                required
-              />
-              <span class="password-toggle" id="login-password-toggle">
-                <i class="far fa-eye"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="remember-forgot">
-            <div class="checkbox-group">
-              <input type="checkbox" id="remember-me" />
-              <label for="remember-me">Remember me</label>
-            </div>
-            <a href="#" class="forgot-link">Forgot Password?</a>
-          </div>
-
-          <button type="submit" class="btn">Login</button>
-
-          <div class="divider">
-            <span>Or login with</span>
-          </div>
-
-          <div class="social-login">
-            <a href="#" class="social-btn fb-btn"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a href="#" class="social-btn google-btn"
-              ><i class="fab fa-google"></i
-            ></a>
-            <a href="#" class="social-btn linkedin-btn"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-          </div>
-
-          <div class="switch-form">
-            Don't have an account? <a id="switch-to-signup">Sign Up</a>
-          </div>
-        </form>
-
-        <!-- Signup Form -->
-        <form id="signup-form" class="auth-form">
-          <div class="form-group">
-            <label for="signup-name">Full Name</label>
+            <label for="card-name">Name on Card</label>
             <div class="input-with-icon">
               <div class="input-icon">
                 <i class="fas fa-user"></i>
               </div>
               <input
                 type="text"
-                id="signup-name"
-                placeholder="Enter your full name"
+                id="card-name"
+                placeholder="Enter name as on card"
                 required
               />
             </div>
           </div>
 
           <div class="form-group">
-            <label for="signup-email">Email Address</label>
+            <label for="card-number">Card Number</label>
             <div class="input-with-icon">
               <div class="input-icon">
-                <i class="fas fa-envelope"></i>
+                <i class="far fa-credit-card"></i>
               </div>
               <input
-                type="email"
-                id="signup-email"
-                placeholder="Enter your email address"
+                type="text"
+                id="card-number"
+                placeholder="1234 5678 9012 3456"
                 required
               />
             </div>
           </div>
 
-          <div class="form-group">
-            <label for="signup-password">Password</label>
-            <div class="input-with-icon">
-              <div class="input-icon">
-                <i class="fas fa-lock"></i>
+          <div class="card-group">
+            <div class="form-group">
+              <label for="expiry-date">Expiry Date</label>
+              <div class="input-with-icon">
+                <div class="input-icon">
+                  <i class="far fa-calendar-alt"></i>
+                </div>
+                <input
+                  type="text"
+                  id="expiry-date"
+                  placeholder="MM/YY"
+                  required
+                />
               </div>
-              <input
-                type="password"
-                id="signup-password"
-                placeholder="Create a strong password"
-                required
-              />
-              <span class="password-toggle" id="signup-password-toggle">
-                <i class="far fa-eye"></i>
-              </span>
+            </div>
+
+            <div class="form-group">
+              <label for="cvv">CVV</label>
+              <div class="input-with-icon">
+                <div class="input-icon">
+                  <i class="fas fa-lock"></i>
+                </div>
+                <input type="text" id="cvv" placeholder="123" required />
+              </div>
             </div>
           </div>
 
-          <div class="form-group">
-            <label for="signup-confirm-password">Confirm Password</label>
-            <div class="input-with-icon">
-              <div class="input-icon">
-                <i class="fas fa-lock"></i>
-              </div>
-              <input
-                type="password"
-                id="signup-confirm-password"
-                placeholder="Confirm your password"
-                required
-              />
-            </div>
+          <div class="secure-note">
+            <i class="fas fa-lock"></i>
+            <span>Your payment information is encrypted and secure</span>
           </div>
 
-          <div class="checkbox-group">
-            <input type="checkbox" id="terms" required />
-            <label for="terms"
-              >I agree to the <a href="#">Terms & Conditions</a></label
-            >
-          </div>
+          <button type="submit" class="btn">Pay Now $142.99</button>
 
-          <button type="submit" class="btn">Create Account</button>
-
-          <div class="divider">
-            <span>Or sign up with</span>
-          </div>
-
-          <div class="social-login">
-            <a href="#" class="social-btn fb-btn"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a href="#" class="social-btn google-btn"
-              ><i class="fab fa-google"></i
-            ></a>
-            <a href="#" class="social-btn linkedin-btn"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-          </div>
-
-          <div class="switch-form">
-            Already have an account? <a id="switch-to-login">Log In</a>
+          <div class="terms">
+            By completing your purchase, you agree to our
+            <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
           </div>
         </form>
       </div>
@@ -305,8 +273,8 @@
         <p>&copy; 2025 EDUBIN. All Rights Reserved.</p>
       </div>
     </footer>
-
-    <script src="JavaScript/join.js"></script>
+    <script src="JavaScript/payment.js"></script>
     <script src="JavaScript/trail.js"></script>
+    <script src="JavaScript/script.js"></script>
   </body>
 </html>

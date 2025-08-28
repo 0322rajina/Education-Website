@@ -1,5 +1,6 @@
 :root {
-  --brand: #112568; /* blue for borders */
+  --brand: #112568;
+  /* blue for borders */
   --muted: #a4cef3;
   --card-bg: #fff;
   --dark: #15037a;
@@ -13,7 +14,8 @@
   height: 500px;
   overflow: hidden;
   border-radius: 12px;
-  border: 12px solid var(--brand); /* constant container border */
+  border: 12px solid var(--brand);
+  /* constant container border */
   box-sizing: border-box;
 }
 
@@ -26,10 +28,12 @@
   opacity: 0;
   transform: translateX(100%);
   transition: opacity 1s ease, transform 1s ease;
-  border: 4px solid transparent; /* default thin border */
+  border: 4px solid transparent;
+  /* default thin border */
   box-sizing: border-box;
   z-index: 0;
 }
+
 /* Arrows */
 .hero-arrow {
   position: absolute;
@@ -37,7 +41,7 @@
   transform: translateY(-50%);
   font-size: 2rem;
   color: #fff;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   border: none;
   border-radius: 50%;
   width: 50px;
@@ -46,12 +50,15 @@
   z-index: 10;
   transition: background 0.3s ease;
 }
+
 .hero-arrow:hover {
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
 }
+
 .left-arrow {
   left: 10px;
 }
+
 .right-arrow {
   right: 10px;
 }
@@ -61,7 +68,8 @@
   opacity: 1;
   transform: translateX(0%);
   z-index: 1;
-  border: 4px solid var(--brand); /* thicker blue border for active slide */
+  border: 4px solid var(--brand);
+  /* thicker blue border for active slide */
 }
 
 /* Previous slide */
@@ -80,13 +88,16 @@
   padding: 1rem 1.5rem;
   color: var(--light);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent);
-  z-index: 2; /* always above slides */
+  z-index: 2;
+  /* always above slides */
 }
+
 .hero-caption h3 {
   margin: 0;
   font-size: 1.6rem;
   font-weight: 600;
 }
+
 .hero-caption p {
   margin: 0.3rem 0 0;
   font-size: 0.9rem;
@@ -103,34 +114,38 @@
   border: 2px solid transparent;
   transition: all 0.3s ease;
 }
+
 .thumb.active {
   border-color: var(--brand);
   opacity: 1;
 }
+
 .thumb:hover {
   opacity: 1;
   transform: scale(1.05);
 }
+
 /* Hover effect for navigation links */
 .nav-link:hover {
-    background-color: #f0f0f0;
-    color: #07145a; /* Your brand color */
-    border-radius: 5px;
-    transition: 0.3s ease;
+  background-color: #f0f0f0;
+  color: #07145a;
+  /* Your brand color */
+  border-radius: 5px;
+  transition: 0.3s ease;
 }
 
 /* Hover effect for gallery images */
- .gallery-item img:hover {
-    transform: scale(1.05);
-    opacity: 0.8;
-    transition: 0.3s ease;
-} 
+.gallery-item img:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
 
 /* Hover effect for download list */
 .list-group-item:hover {
-    background-color: #f9f9f9;
-    color: #1a0a65;
-    transition: 0.3s ease;
+  background-color: #f9f9f9;
+  color: #1a0a65;
+  transition: 0.3s ease;
 }
 
 /* Year chips */
@@ -142,6 +157,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .year-chip.active {
   background: var(--brand);
   color: var(--light);
@@ -157,13 +173,15 @@
   cursor: pointer;
   transition: background 0.3s ease;
 }
+
 #heroPlay:hover {
   background: #0d1ccf;
 }
 
 /* Hero item fade animation right→left */
 .hero-item {
-  animation: none; /* disable any default animation */
+  animation: none;
+  /* disable any default animation */
 }
 
 /* Responsiveness */
@@ -171,9 +189,11 @@
   .hero-slide {
     height: 260px;
   }
+
   .hero-caption h3 {
     font-size: 1.2rem;
   }
+
   .thumb {
     width: 56px;
     height: 40px;

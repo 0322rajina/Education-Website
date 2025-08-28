@@ -1,9 +1,9 @@
 // ===== Trail Animation =====
-window.addEventListener('load', () => {
-  const canvas = document.getElementById('trail');
+window.addEventListener("load", () => {
+  const canvas = document.getElementById("trail");
   if (!canvas) return; // Stops if no canvas on page
 
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext("2d");
 
   // Set initial canvas size
   function resizeCanvas() {
@@ -11,11 +11,11 @@ window.addEventListener('load', () => {
     canvas.height = window.innerHeight;
   }
   resizeCanvas();
-  window.addEventListener('resize', resizeCanvas);
+  window.addEventListener("resize", resizeCanvas);
 
   // Mouse position
   let mouse = { x: 0, y: 0 };
-  window.addEventListener('mousemove', (e) => {
+  window.addEventListener("mousemove", (e) => {
     mouse.x = e.clientX;
     mouse.y = e.clientY;
   });
@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
       this.size = Math.random() * 5 + 2;
       this.speedX = (Math.random() - 0.5) * 2;
       this.speedY = (Math.random() - 0.5) * 2;
-      this.color = 'rgba(241,196,15,0.8)'; // Yellow
+      this.color = "rgba(241,196,15,0.8)"; // Yellow
     }
     update() {
       this.x += this.speedX;
