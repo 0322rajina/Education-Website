@@ -25,6 +25,10 @@ body{
   padding: 15px;
   position: relative;
 }
+.navbar ul li a:hover {
+  color: gold;
+}
+
 .logo {
   font-size: 1.8rem;
   font-weight: bold;

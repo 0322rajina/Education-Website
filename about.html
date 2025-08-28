@@ -4,30 +4,494 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/about.css">
+    <link rel="stylesheet" href="CSS/style.css">
+     <!-- External Resources: Fonts, Icons, and Animation Library -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
+
 </head>
 <body>
+     <canvas id="trail"></canvas>
+
+    <!-- ===== Header ===== -->
     <header>
-        <h1>EduAcademy</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="Join.html">Join</a></li>
-                <li> <a href="Contact.html">Contact us</a></li>
-                <li><a href="Team.html">Team</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="Resources.html">Resources</a></li>
-                <li><a href="Faq.html">FAQ</a></li>
-                <li><a href="Blog.html">Blog</a></li>
-                <li><a href="Gallery.html">Gallery</a></li>
-                <li><a href="Login.html">Login</a></li>
+      <nav class="navbar">
+        <div class="logo">
+          <span class="edu">Edu</span><span class="academy">Academy</span>
+        </div>
+
+        <!-- Hamburger Button -->
+        <div class="hamburger">&#9776;</div>
+
+        <ul class="nav-links">
+          <!-- First 5 visible links -->
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="Courses.html">Courses</a></li>
+          <li><a href="Events.html">Events</a></li>
+          <li><a href="Join.html">Join/Login</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="Contact.html">Contact Us</a></li>
+
+          <!-- Rest inside dropdown -->
+          <li class="dropdown">
+            <a href="#">More ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="Gallery.html">Gallery</a></li>
+              <li><a href="Team.html">Team</a></li>
+              <li><a href="Resources.html">Resources</a></li>
+              <li><a href="Faq.html">FAQ</a></li>
             </ul>
-        </nav>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-  
-     
-    <script src="script.js"></script>
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container hero-wrap">
+    <div data-aos="fade-right" data-aos-delay="100">
+      <span class="chip"><i class="fa-solid fa-graduation-cap"></i> About EduPlatform</span>
+      <h1>Quality Education for Everyone, Everywhere.</h1>
+      <p class="lead">
+        We blend academic rigor with modern technology, mentoring, and real-world practice to help learners thrive.
+        From foundation programs to industry-ready certifications—our ecosystem supports your entire learning journey.
+      </p>
+      <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+        <a href="#programs" class="btn"><i class="fa-solid fa-compass"></i> Explore Programs</a>
+        <a href="#story" class="btn btn-outline"><i class="fa-solid fa-book-open"></i> Our Story</a>
+      </div>
+    </div>
+    <div data-aos="fade-left" data-aos-delay="200">
+      <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1600&auto=format&fit=crop" alt="Students collaborating" class="hero-illus floating">
+    </div>
+  </div>
+</section>
+
+<!-- Our Story / Timeline Section -->
+<section id="story">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Our Story</h2>
+    <p class="lead text-center mb-40" data-aos="fade-up" data-aos-delay="60" style="text-align: center; max-width: 800px; margin: 0 auto;">
+      Founded with the belief that education should be inclusive, engaging, and practical, EduPlatform has grown into a global community of learners, mentors, and innovators.
+    </p>
+
+    <div class="timeline" data-aos="fade-up" data-aos-delay="120">
+      <div class="t-item">
+        <div class="t-dot">1</div>
+        <div class="t-card">
+          <strong>2018 — Foundation</strong>
+          <p>We launched with a handful of courses and a mission to democratize access to quality learning. Our first cohort had just 50 students but achieved remarkable success.</p>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-dot">2</div>
+        <div class="t-card">
+          <strong>2020 — Digital Leap</strong>
+          <p>Introduced live classes, recorded lessons, and a resource library empowering remote learners globally. We grew to serve over 10,000 students across 30 countries.</p>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-dot">3</div>
+        <div class="t-card">
+          <strong>2023 — Partnerships</strong>
+          <p>Signed collaborations with universities and companies to align curricula with industry needs. Launched our career placement program with 90% success rate.</p>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-dot">4</div>
+        <div class="t-card">
+          <strong>2025 — Innovation</strong>
+          <p>Expanding AI-driven personalized learning, skill pathways, and outcome-based mentoring at scale. Introducing VR classrooms and global collaborative projects.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mission & Vision Section -->
+<section style="background:#eef2ff">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Our Mission & Vision</h2>
+    <div class="grid grid-2">
+      <div class="card" data-aos="fade-up">
+        <div class="icon"><i class="fa-solid fa-bullseye"></i></div>
+        <h3>Our Mission</h3>
+        <p>To make quality education accessible and practical—equipping learners with knowledge, skills, and character to solve real-world problems.</p>
+        <ul class="list">
+          <li><i class="fa-solid fa-check"></i><span>Project-based, mentor-led learning</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Inclusive access and scholarships</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Career readiness and lifelong learning</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Global perspective with local relevance</span></li>
+        </ul>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="80">
+        <div class="icon"><i class="fa-solid fa-eye"></i></div>
+        <h3>Our Vision</h3>
+        <p>To be a globally trusted learning ecosystem that nurtures curiosity, integrity, and innovation—creating leaders who uplift communities.</p>
+        <ul class="list">
+          <li><i class="fa-solid fa-check"></i><span>World-class content & pedagogy</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Global community & collaboration</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Ethical, sustainable impact</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Lifelong learning pathways</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core Values Section -->
+<section>
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Our Core Values</h2>
+    <p class="lead text-center mb-40" data-aos="fade-up" data-aos-delay="60" style="text-align: center; max-width: 800px; margin: 0 auto;">
+      These principles guide everything we do, from curriculum design to student support and community building.
+    </p>
+    <div class="grid grid-3">
+      <div class="card" data-aos="fade-up"><h3>Excellence</h3><p>We strive for best-in-class standards in content, delivery, and outcomes. Continuous improvement is at our core.</p></div>
+      <div class="card" data-aos="fade-up" data-aos-delay="60"><h3>Innovation</h3><p>We embrace new ideas and tools to make learning engaging and effective. We're not afraid to challenge conventions.</p></div>
+      <div class="card" data-aos="fade-up" data-aos-delay="120"><h3>Integrity</h3><p>We act with honesty, transparency, and respect for every learner. Ethics guide our decisions and actions.</p></div>
+      <div class="card" data-aos="fade-up"><h3>Inclusivity</h3><p>We design for diverse backgrounds, abilities, and aspirations. Everyone deserves access to quality education.</p></div>
+      <div class="card" data-aos="fade-up" data-aos-delay="60"><h3>Community</h3><p>We grow together through peer learning, clubs, and service. Collaboration amplifies our impact.</p></div>
+      <div class="card" data-aos="fade-up" data-aos-delay="120"><h3>Impact</h3><p>We measure success by learner progress and societal benefit. We're driven by outcomes that matter.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Programs Section -->
+<section id="programs" style="background:#eef2ff">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Programs & Courses</h2>
+    <p class="lead text-center mb-40" data-aos="fade-up" data-aos-delay="60" style="text-align: center; max-width: 800px; margin: 0 auto;">
+      Flexible pathways for every stage of your journey. From beginner to advanced, we have learning options to match your goals.
+    </p>
+
+    <div class="grid grid-3">
+      <div class="card" data-aos="fade-up">
+        <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
+        <h3>Undergraduate</h3>
+        <p>Solid foundations in CS/IT, Business, Arts & Sciences with hands-on projects and internships. 4-year degrees with industry immersion.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="60">
+        <div class="icon"><i class="fa-solid fa-microscope"></i></div>
+        <h3>Postgraduate</h3>
+        <p>Research-led specializations, labs, publications, and industry collaboration. Master's and PhD programs with expert supervision.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="120">
+        <div class="icon"><i class="fa-solid fa-certificate"></i></div>
+        <h3>Certifications</h3>
+        <p>Short, career-focused tracks in Web, Data, Cloud, Cybersecurity, Design & more. Industry-recognized credentials in 3-9 months.</p>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <div class="icon"><i class="fa-solid fa-globe"></i></div>
+        <h3>Online & Hybrid</h3>
+        <p>Live + recorded classes, interactive labs, discussion forums, and 24/7 resources. Learn at your own pace from anywhere.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="60">
+        <div class="icon"><i class="fa-solid fa-briefcase"></i></div>
+        <h3>Career Programs</h3>
+        <p>Placement prep, mock interviews, portfolio reviews, and mentor guidance. Connect with top employers in our network.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="120">
+        <div class="icon"><i class="fa-solid fa-people-group"></i></div>
+        <h3>Workshops & Bootcamps</h3>
+        <p>Intensive sprints to master tools and ship real projects with peers. Weekend and week-long immersive experiences.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Resources & Facilities Section -->
+<section>
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Learning Resources & Facilities</h2>
+    <p class="lead text-center mb-40" data-aos="fade-up" data-aos-delay="60" style="text-align: center; max-width: 800px; margin: 0 auto;">
+      We invest in world-class resources to support your learning journey, both online and on-campus.
+    </p>
+    <div class="grid grid-3">
+      <div class="card" data-aos="fade-up">
+        <div class="icon"><i class="fa-solid fa-book"></i></div>
+        <h3>Digital Library</h3>
+        <p>Access thousands of e-books, journals, and databases with research guidance. 24/7 availability from any device.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="60">
+        <div class="icon"><i class="fa-solid fa-flask"></i></div>
+        <h3>Labs & Studios</h3>
+        <p>Modern computer, science, and innovation labs for practical experimentation. VR/AR studios and maker spaces.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="120">
+        <div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+        <h3>Mentoring</h3>
+        <p>1:1 mentor sessions, office hours, and peer groups to support steady progress. Industry experts and academic advisors.</p>
+      </div>
+      <div class="card" data-aos="fade-up"> 
+        <div class="icon"><i class="fa-solid fa-laptop-code"></i></div> 
+        <h3>Tech Infrastructure</h3> 
+        <p>High-speed internet, cloud computing resources, and specialized software for all students. Enterprise-grade security and reliability.</p> 
+      </div> 
+      <div class="card" data-aos="fade-up" data-aos-delay="60"> 
+        <div class="icon"><i class="fa-solid fa-people-roof"></i></div> 
+        <h3>Collaboration Spaces</h3> 
+        <p>Virtual and physical spaces for team projects, study groups, and community building. Designed for creativity and productivity.</p> 
+      </div> 
+      <div class="card" data-aos="fade-up" data-aos-delay="120"> 
+        <div class="icon"><i class="fa-solid fa-headset"></i></div> 
+        <h3>Support Services</h3> 
+        <p>24/7 technical support, academic counseling, and career guidance. We're here to help you succeed at every step.</p> 
+      </div> 
+    </div> 
+  </div> 
+</section> 
+
+<!-- Faculty Section -->
+<section style="background:#eef2ff"> 
+  <div class="container"> 
+    <h2 class="section-title" data-aos="fade-up">Faculty & Teaching Approach</h2> 
+    <p class="lead text-center mb-40" data-aos="fade-up" data-aos-delay="60" style="text-align: center; max-width: 800px; margin: 0 auto;"> 
+      Industry experts + academic excellence + project-based learning. Our faculty bring real-world experience into the virtual classroom. 
+    </p> 
+    <div class="grid grid-2"> 
+      <div data-aos="fade-up"> 
+        <h3>Our Distinguished Faculty</h3> 
+        <p>Our instructors include industry veterans, published researchers, and award-winning educators who are passionate about student success.</p> 
+        <ul class="list"> 
+          <li><i class="fa-solid fa-check"></i><span>80% hold advanced degrees in their fields</span></li> 
+          <li><i class="fa-solid fa-check"></i><span>15+ years average professional experience</span></li> 
+          <li><i class="fa-solid fa-check"></i><span>Regular industry practitioners and consultants</span></li> 
+          <li><i class="fa-solid fa-check"></i><span>Diverse backgrounds and global perspectives</span></li> 
+        </ul> 
+      </div> 
+      <div data-aos="fade-up" data-aos-delay="80"> 
+        <h3>Teaching Methodology</h3> 
+        <p>We blend the best of traditional pedagogy with innovative digital learning techniques for maximum engagement and retention.</p> 
+        <ul class="list"> 
+          <li><i class="fa-solid fa-check"></i><span>Interactive lectures with demos and labs</span></li> 
+          <li><i class="fa-solid fa-check"></i><span>Assessment via projects, portfolios, and presentations</span></li> 
+          <li><i class="fa-solid fa-check"></i><span>Regular feedback cycles and learning analytics</span></li> 
+          <li><i class="fa-solid fa-check"></i><span>Adaptive learning paths based on performance</span></li> 
+        </ul> 
+      </div> 
+    </div> 
+  </div> 
+</section> 
+
+<!-- Student Life Section -->
+<section> 
+  <div class="container"> 
+    <h2 class="section-title" data-aos="fade-up">Student Life & Community</h2> 
+    <p class="lead text-center mb-40" data-aos="fade-up" data-aos-delay="60" style="text-align: center; max-width: 800px; margin: 0 auto;"> 
+      Clubs, events, hackathons, sports, and community service—grow beyond the classroom and build lifelong connections. 
+    </p>
+    
+    <!-- Gallery -->
+    <div class="gallery" id="gallery">
+      <div class="g-item" data-aos="zoom-in"><img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1200&auto=format&fit=crop" alt="Club activity"></div>
+      <div class="g-item" data-aos="zoom-in" data-aos-delay="40"><img src="https://images.unsplash.com/photo-1510936111840-65e151ad71bb?q=80&w=1200&auto=format&fit=crop" alt="Hackathon"></div>
+      <div class="g-item" data-aos="zoom-in" data-aos-delay="80"><img src="https://images.unsplash.com/photo-1483721310020-03333e577078?q=80&w=1200&auto=format&fit=crop" alt="Campus sports"></div>
+      <div class="g-item" data-aos="zoom-in"><img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop" alt="Cultural event"></div>
+      <div class="g-item" data-aos="zoom-in" data-aos-delay="40"><img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1200&auto=format&fit=crop" alt="Study group"></div>
+      <div class="g-item" data-aos="zoom-in" data-aos-delay="80"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop" alt="Community work"></div>
+    </div>
+
+    <!-- Community Features -->
+    <div class="grid grid-3 mt-40">
+      <div class="card" data-aos="fade-up">
+        <div class="icon"><i class="fa-solid fa-robot"></i></div>
+        <h3>Tech Clubs</h3>
+        <p>AI, Web Development, Cybersecurity, and Data Science clubs with regular workshops, competitions, and project showcases.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="60">
+        <div class="icon"><i class="fa-solid fa-paintbrush"></i></div>
+        <h3>Creative Arts</h3>
+        <p>Photography, Design, Creative Writing, and Music clubs to explore and develop your artistic talents alongside tech studies.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="120">
+        <div class="icon"><i class="fa-solid fa-earth-americas"></i></div>
+        <h3>Global Community</h3>
+        <p>Connect with students from 50+ countries through cultural exchanges, language partnerships, and international projects.</p>
+      </div>
+    </div>
+  </div>
+</section> 
+
+<!-- Achievements & Partnerships Section -->
+<section style="background:#eef2ff"> 
+  <div class="container"> 
+    <h2 class="section-title" data-aos="fade-up">Achievements & Partnerships</h2> 
+    <p class="lead text-center mb-40" data-aos="fade-up" data-aos-delay="60" style="text-align: center; max-width: 800px; margin: 0 auto;"> 
+      Recognition of our excellence and collaborations that enhance our educational offerings and career opportunities for students. 
+    </p>
+    
+    <div class="grid grid-2">
+      <div data-aos="fade-up">
+        <h3>Our Achievements</h3>
+        <ul class="list">
+          <li><i class="fa-solid fa-trophy"></i><span>Top 10 in digital learning innovation (regional)</span></li>
+          <li><i class="fa-solid fa-award"></i><span>50+ awards in research, teaching, and student projects</span></li>
+          <li><i class="fa-solid fa-medal"></i><span>95% student satisfaction rate for 3 consecutive years</span></li>
+          <li><i class="fa-solid fa-star"></i><span>Accredited by International Education Standards Board</span></li>
+        </ul>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="80">
+        <h3>Industry Partnerships</h3>
+        <ul class="list">
+          <li><i class="fa-solid fa-handshake-angle"></i><span>200+ collaborations with universities and companies</span></li>
+          <li><i class="fa-solid fa-building"></i><span>Industry advisory board with executives from top tech firms</span></li>
+          <li><i class="fa-solid fa-briefcase"></i><span>Guaranteed internship opportunities with partner organizations</span></li>
+          <li><i class="fa-solid fa-code"></i><span>Curriculum developed with input from Google, Microsoft, and Amazon</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section> 
+
+<!-- Statistics Section -->
+<section> 
+  <div class="container"> 
+    <h2 class="section-title" data-aos="fade-up">Our Impact in Numbers</h2> 
+    <p class="lead text-center mb-40" data-aos="fade-up" data-aos-delay="60" style="text-align: center; max-width: 800px; margin: 0 auto;"> 
+      The measurable results of our commitment to educational excellence and student success. 
+    </p> 
+    <div class="stats" id="stats"> 
+      <div class="stat" data-aos="flip-up"><h3 class="count" data-target="100000">0</h3><p>Students Enrolled</p></div> 
+      <div class="stat" data-aos="flip-up" data-aos-delay="60"><h3 class="count" data-target="300">0</h3><p>Courses Offered</p></div> 
+      <div class="stat" data-aos="flip-up" data-aos-delay="120"><h3 class="count" data-target="500">0</h3><p>Faculty & Mentors</p></div> 
+      <div class="stat" data-aos="flip-up" data-aos-delay="180"><h3 class="count" data-target="50">0</h3><p>Awards Won</p></div> 
+      <div class="stat" data-aos="flip-up" data-aos-delay="240"><h3 class="count" data-target="95">0</h3><p>Success Rate</p></div> 
+      <div class="stat" data-aos="flip-up" data-aos-delay="300"><h3 class="count" data-target="40">0</h3><p>Countries Reached</p></div> 
+    </div> 
+  </div> 
+</section> 
+
+<!-- Testimonials Section -->
+<section style="background:#eef2ff"> 
+  <div class="container"> 
+    <h2 class="section-title" data-aos="fade-up">What Our Community Says</h2> 
+    <p class="lead text-center mb-40" data-aos="fade-up" data-aos-delay="60" style="text-align: center; max-width: 800px; margin: 0 auto;"> 
+      Hear from students, alumni, and industry partners about their experiences with EduPlatform. 
+    </p> 
+    <div class="carousel" data-aos="fade-up" data-aos-delay="60"> 
+      <button class="car-btn prev"><i class="fa-solid fa-chevron-left"></i></button> 
+      <div class="track" id="track"> 
+        <div class="ts"> 
+          <p>“The mentors pushed me to build real projects. I landed an internship within 3 months and a full-time offer before graduation.”</p> 
+          <h4>Ramesh Kumar • BSc CSIT, 2022</h4> 
+        </div> 
+        <div class="ts"> 
+          <p>“Flexible online classes + recorded sessions helped me balance studies and work. The community support made me feel connected despite the distance.”</p> 
+          <h4>Priya Sharma • MBA, 2023</h4> 
+        </div> 
+        <div class="ts"> 
+          <p>“Capstone projects and portfolio reviews made interviews so much easier. I received 3 job offers in my final semester!”</p> 
+          <h4>Aman Thapa • Data Science, 2023</h4> 
+        </div> 
+        <div class="ts"> 
+          <p>“As an industry partner, we're consistently impressed with EduPlatform graduates. They arrive job-ready with practical skills and professional maturity.”</p> 
+          <h4>Sarah Johnson • Tech Recruitment, Google</h4> 
+        </div> 
+      </div> 
+      <button class="car-btn next"><i class="fa-solid fa-chevron-right"></i></button> 
+    </div> 
+  </div> 
+</section> 
+
+<!-- Call to Action Section -->
+<section> 
+  <div class="container"> 
+    <div class="cta" data-aos="zoom-in"> 
+      <h2>Ready to Start Your Journey?</h2> 
+      <p class="lead">Join a thriving community of learners, mentors, and builders. Explore programs, apply for scholarships, or talk to an advisor today.</p> 
+      <div style="margin-top:28px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;"> 
+        <a href="#programs" class="btn"><i class="fa-solid fa-book-open"></i> View Programs</a> 
+        <a href="Contact.html" class="btn" style="background:#F1C40F;color:var(--secondary)"><i class="fa-solid fa-message"></i> Talk to Us</a> 
+        <a href="#" class="btn btn-outline" style="color: #fff; border-color: #fff;"><i class="fa-solid fa-download"></i> Brochure</a> 
+      </div> 
+    </div> 
+  </div> 
+</section> 
+
+<!-- Lightbox Modal for Gallery Images -->
+<div class="lightbox" id="lightbox"> 
+  <button class="close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button> 
+  <img alt="Preview"/> 
+</div> 
+
+      <!----Footer Section---->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Logo & About -->
+            <div class="footer-col">
+                <h2 class="footer-logo">🎓 EDUBIN</h2>
+                <p>
+                    EDUBIN is a modern learning platform that provides quality education
+                    resources, expert-led courses, and community-driven events to
+                    empower students worldwide.
+                </p>
+                <!-- Social Media Icons -->
+                <div class="footer-social">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Sitemap -->
+            <div class="footer-col">
+                <h3>Sitemap</h3>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="Join.html">Join/Login</a></li>
+                    <li><a href="Contact.html">Contact us</a></li>
+                    <li><a href="Team.html">Team</a></li>
+                    <li><a href="Courses.html">Courses</a></li>
+                    <li><a href="Resources.html">Resources</a></li>
+                    <li><a href="Events.html">Events</a></li>
+                    <li><a href="Faq.html">FAQ</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul class="nav-links">
+                    <li><a href="Faq.html">FAQs</a></li>
+                    <li><a href="#">Privacy & Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Documentation</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p>
+                    <i class="fas fa-home"></i> 123 Learning Street, New Baneshwor,
+                    Kathmandu
+                </p>
+                <p><i class="fas fa-phone"></i> +1 (647) 123-4567, +9779716345689</p>
+                <p><i class="fas fa-envelope"></i> support@edubin.com</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 EDUBIN. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- Lightbox Modal for Gallery Images -->
+<div class="lightbox" id="lightbox"> 
+  <button class="close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button> 
+  <img alt="Preview"/> 
+</div> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> 
+    <script src="JavaScript/about.js"></script>
+    <script src="JavaScript/trail.js"></script>
+    <script src="JavaScript/script.js"></script>
 </body>
 </html>

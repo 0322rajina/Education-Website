@@ -3,31 +3,351 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>EduPlatform - Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/events.css">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
+     <canvas id="trail"></canvas>
+
+    <!-- ===== Header ===== -->
     <header>
-        <h1>EduAcademy</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="Join.html">Join</a></li>
-                <li> <a href="Contact.html">Contact us</a></li>
-                <li><a href="Team.html">Team</a></li>
-                <li><a href="Courses.html">Courses</a></li>
-                <li><a href="Resources.html">Resources</a></li>
-                <li><a href="Events.html">Events</a></li>
-                <li><a href="Faq.html">FAQ</a></li>
-                <li><a href="Blog.html">Blog</a></li>
-                <li><a href="Gallery.html">Gallery</a></li>
+      <nav class="navbar">
+        <div class="logo">
+          <span class="edu">Edu</span><span class="academy">Academy</span>
+        </div>
+
+        <!-- Hamburger Button -->
+        <div class="hamburger">&#9776;</div>
+
+        <ul class="nav-links">
+          <!-- First 5 visible links -->
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="Courses.html">Courses</a></li>
+          <li><a href="Events.html">Events</a></li>
+          <li><a href="Join.html">Join/Sign Up</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="Contact.html">Contact Us</a></li>
+
+          <!-- Rest inside dropdown -->
+          <li class="dropdown">
+            <a href="#">More ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="Gallery.html">Gallery</a></li>
+              <li><a href="Team.html">Team</a></li>
+              <li><a href="Resources.html">Resources</a></li>
+              <li><a href="Faq.html">FAQ</a></li>
             </ul>
-        </nav>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <footer>
-        <p>&copy; 2023 EduAcademy. All rights reserved.</p> 
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Upcoming Events & Workshops</h2>
+            <p>Join our community events, workshops, and webinars to enhance your learning experience and connect with experts.</p>
+            <a href="#upcoming-events" class="btn">View Events</a>
+        </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="upcoming-events" id="upcoming-events">
+        <div class="container">
+            <h2 class="section-title">Upcoming Events</h2>
+            
+            <div class="event-filters">
+                <button class="filter-btn active" data-filter="all">All Events</button>
+                <button class="filter-btn" data-filter="webinar">Webinars</button>
+                <button class="filter-btn" data-filter="workshop">Workshops</button>
+                <button class="filter-btn" data-filter="conference">Conferences</button>
+                <button class="filter-btn" data-filter="hackathon">Hackathons</button>
+            </div>
+            
+            <div class="events-grid">
+                <!-- Event 1 -->
+                <div class="event-card" data-category="webinar">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="AI in Education Webinar">
+                        <div class="event-tag">Webinar</div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">
+                            <i class="far fa-calendar-alt"></i> Sept 15, 2023 | 5:00 PM EST
+                        </div>
+                        <h3 class="event-title">The Future of AI in Education</h3>
+                        <p class="event-excerpt">Explore how artificial intelligence is transforming educational practices and creating new learning opportunities.</p>
+                        <div class="event-meta">
+                            <div class="event-location">
+                                <i class="fas fa-map-marker-alt"></i> Online Event
+                            </div>
+                            <a href="Join.html" class="btn">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 2 -->
+                <div class="event-card" data-category="workshop">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="UI/UX Design Workshop">
+                        <div class="event-tag">Workshop</div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">
+                            <i class="far fa-calendar-alt"></i> Oct 5, 2023 | 2:00 PM EST
+                        </div>
+                        <h3 class="event-title">UI/UX Design Fundamentals Workshop</h3>
+                        <p class="event-excerpt">Hands-on workshop covering the principles of user interface and experience design for digital products.</p>
+                        <div class="event-meta">
+                            <div class="event-location">
+                                <i class="fas fa-map-marker-alt"></i> Campus Design Lab
+                            </div>
+                            <a href="Join.html" class="btn">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 3 -->
+                <div class="event-card" data-category="hackathon">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cyber Security Hackathon">
+                        <div class="event-tag">Hackathon</div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">
+                            <i class="far fa-calendar-alt"></i> Nov 12, 2023 | 9:00 AM EST
+                        </div>
+                        <h3 class="event-title">Cyber Security Challenge Hackathon</h3>
+                        <p class="event-excerpt">24-hour hackathon focused on developing innovative solutions for cybersecurity challenges.</p>
+                        <div class="event-meta">
+                            <div class="event-location">
+                                <i class="fas fa-map-marker-alt"></i> Tech Innovation Hub
+                            </div>
+                            <a href="Join.html" class="btn">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 4 -->
+                <div class="event-card" data-category="conference">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Education Technology Conference">
+                        <div class="event-tag">Conference</div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">
+                            <i class="far fa-calendar-alt"></i> Dec 3-4, 2023 | 10:00 AM EST
+                        </div>
+                        <h3 class="event-title">Education Technology Conference 2023</h3>
+                        <p class="event-excerpt">Annual conference bringing together educators, technologists, and innovators to discuss the future of learning.</p>
+                        <div class="event-meta">
+                            <div class="event-location">
+                                <i class="fas fa-map-marker-alt"></i> Convention Center
+                            </div>
+                            <a href="Join.html" class="btn">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 5 -->
+                <div class="event-card" data-category="webinar">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Data Science Webinar">
+                        <div class="event-tag">Webinar</div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">
+                            <i class="far fa-calendar-alt"></i> Sept 28, 2023 | 4:00 PM EST
+                        </div>
+                        <h3 class="event-title">Data Science Career Pathways</h3>
+                        <p class="event-excerpt">Learn about career opportunities in data science and the skills needed to succeed in this rapidly growing field.</p>
+                        <div class="event-meta">
+                            <div class="event-location">
+                                <i class="fas fa-map-marker-alt"></i> Online Event
+                            </div>
+                            <a href="Join.html" class="btn">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 6 -->
+                <div class="event-card" data-category="workshop">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Digital Marketing Workshop">
+                        <div class="event-tag">Workshop</div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">
+                            <i class="far fa-calendar-alt"></i> Oct 15, 2023 | 1:00 PM EST
+                        </div>
+                        <h3 class="event-title">Digital Marketing Strategies Workshop</h3>
+                        <p class="event-excerpt">Practical workshop on developing effective digital marketing campaigns and measuring their success.</p>
+                        <div class="event-meta">
+                            <div class="event-location">
+                                <i class="fas fa-map-marker-alt"></i> Business Center
+                            </div>
+                            <a href="Join.html" class="btn">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Events -->
+    <section class="past-events">
+        <div class="container">
+            <h2 class="section-title">Past Events</h2>
+            
+            <div class="events-grid">
+                <!-- Past Event 1 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Coding Bootcamp">
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">
+                            <i class="far fa-calendar-alt"></i> Aug 10, 2023
+                        </div>
+                        <h3 class="event-title">Summer Coding Bootcamp</h3>
+                        <p class="event-excerpt">Intensive week-long coding bootcamp covering web development fundamentals and advanced techniques.</p>
+                        <div class="event-meta">
+                            <div class="event-location">
+                                <i class="fas fa-map-marker-alt"></i> Computer Lab 3
+                            </div>
+                            <a href="Gallery.html" class="btn">View Photos</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Past Event 2 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Research Symposium">
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">
+                            <i class="far fa-calendar-alt"></i> Jul 22, 2023
+                        </div>
+                        <h3 class="event-title">Annual Research Symposium</h3>
+                        <p class="event-excerpt">Showcasing innovative student research projects across various disciplines with keynote speakers.</p>
+                        <div class="event-meta">
+                            <div class="event-location">
+                                <i class="fas fa-map-marker-alt"></i> Main Auditorium
+                            </div>
+                            <a href="Gallery.html" class="btn">View Photos</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Past Event 3 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Career Fair">
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">
+                            <i class="far fa-calendar-alt"></i> Jun 15, 2023
+                        </div>
+                        <h3 class="event-title">Tech Career Fair 2023</h3>
+                        <p class="event-excerpt">Connecting students with top employers in the technology industry for internships and full-time positions.</p>
+                        <div class="event-meta">
+                            <div class="event-location">
+                                <i class="fas fa-map-marker-alt"></i> Exhibition Hall
+                            </div>
+                            <a href="Gallery.html" class="btn">View Photos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2 class="section-title">Stay Updated</h2>
+            <p>Subscribe to our newsletter to receive updates about upcoming events, workshops, and exclusive learning opportunities.</p>
+            
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+     <!----Footer Section---->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Logo & About -->
+            <div class="footer-col">
+                <h2 class="footer-logo">🎓 EDUBIN</h2>
+                <p>
+                    EDUBIN is a modern learning platform that provides quality education
+                    resources, expert-led courses, and community-driven events to
+                    empower students worldwide.
+                </p>
+                <!-- Social Media Icons -->
+                <div class="footer-social">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Sitemap -->
+            <div class="footer-col">
+                <h3>Sitemap</h3>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="Join.html">Join/Login</a></li>
+                    <li><a href="Contact.html">Contact us</a></li>
+                    <li><a href="Team.html">Team</a></li>
+                    <li><a href="Courses.html">Courses</a></li>
+                    <li><a href="Resources.html">Resources</a></li>
+                    <li><a href="Events.html">Events</a></li>
+                    <li><a href="Faq.html">FAQ</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul class="nav-links">
+                    <li><a href="Faq.html">FAQs</a></li>
+                    <li><a href="#">Privacy & Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Documentation</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p>
+                    <i class="fas fa-home"></i> 123 Learning Street, New Baneshwor,
+                    Kathmandu
+                </p>
+                <p><i class="fas fa-phone"></i> +1 (647) 123-4567, +9779716345689</p>
+                <p><i class="fas fa-envelope"></i> support@edubin.com</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 EDUBIN. All Rights Reserved.</p>
+        </div>
     </footer>
-    <script src="script.js"></script>
+
+<script src="JavaScript/events.js"></script> 
+<script src="JavaScript/trail.js"></script>
+<script src="JavaScript/script.js"></script>
 </body>
 </html>

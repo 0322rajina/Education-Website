@@ -4,30 +4,501 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/courses.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
 </head>
 <body>
+     <canvas id="trail"></canvas>
+
+    <!-- ===== Header ===== -->
     <header>
-        <h1>EduAcademy</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="Join.html">Join</a></li>
-                <li> <a href="Contact.html">Contact us</a></li>
-                <li><a href="Team.html">Team</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="Resources.html">Resources</a></li>
-                <li><a href="Faq.html">FAQ</a></li>
-                <li><a href="Blog.html">Blog</a></li>
-                <li><a href="Gallery.html">Gallery</a></li>
-                <li><a href="Login.html">Login</a></li>
+      <nav class="navbar">
+        <div class="logo">
+          <span class="edu">Edu</span><span class="academy">Academy</span>
+        </div>
+
+        <!-- Hamburger Button -->
+        <div class="hamburger">&#9776;</div>
+
+        <ul class="nav-links">
+          <!-- First 5 visible links -->
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="Courses.html">Courses</a></li>
+          <li><a href="Events.html">Events</a></li>
+          <li><a href="Join.html">Join/Login</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="Contact.html">Contact Us</a></li>
+
+          <!-- Rest inside dropdown -->
+          <li class="dropdown">
+            <a href="#">More ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="Gallery.html">Gallery</a></li>
+              <li><a href="Team.html">Team</a></li>
+              <li><a href="Resources.html">Resources</a></li>
+              <li><a href="Faq.html">FAQ</a></li>
             </ul>
-        </nav>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <footer>
-        <p>&copy; 2023 EduAcademy. All rights reserved.</p> 
+
+   
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Expand Your Knowledge with Our Courses</h2>
+            <p>Discover a wide range of courses designed to help you achieve your learning goals and advance your career.</p>
+            <a href="#featured-courses" class="btn">Explore Courses</a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Browse by Category</h2>
+            
+            <div class="categories-grid">
+                <div class="category-card" data-category="technology">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="category-title">Technology</h3>
+                    <p class="category-count">24 Courses</p>
+                </div>
+                
+                <div class="category-card" data-category="business">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="category-title">Business</h3>
+                    <p class="category-count">18 Courses</p>
+                </div>
+                
+                <div class="category-card" data-category="design">
+                    <div class="category-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="category-title">Design</h3>
+                    <p class="category-count">15 Courses</p>
+                </div>
+                
+                <div class="category-card" data-category="photography">
+                    <div class="category-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="category-title">Photography</h3>
+                    <p class="category-count">12 Courses</p>
+                </div>
+                
+                <div class="category-card" data-category="language">
+                    <div class="category-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="category-title">Language</h3>
+                    <p class="category-count">9 Courses</p>
+                </div>
+                
+                <div class="category-card" data-category="health">
+                    <div class="category-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="category-title">Health & Wellness</h3>
+                    <p class="category-count">11 Courses</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section class="featured-courses" id="featured-courses">
+        <div class="container">
+            <h2 class="section-title">Featured Courses</h2>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="Search courses...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            
+            <div class="course-filters">
+                <button class="filter-btn active" data-filter="all">All Courses</button>
+                <button class="filter-btn" data-filter="bestseller">Bestseller</button>
+                <button class="filter-btn" data-filter="new">New</button>
+                <button class="filter-btn" data-filter="popular">Popular</button>
+                <button class="filter-btn" data-filter="free">Free</button>
+                <button class="filter-btn" data-filter="technology">Technology</button>
+                <button class="filter-btn" data-filter="business">Business</button>
+            </div>
+            
+            <div class="courses-grid">
+                <!-- Course 1 -->
+                <div class="course-card" data-category="bestseller popular technology" data-title="web development bootcamp">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Web Development Bootcamp">
+                        <div class="course-level">Beginner</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-duration">
+                            <i class="far fa-clock"></i> 8 weeks
+                        </div>
+                        <h3 class="course-title">Complete Web Development Bootcamp</h3>
+                        <p class="course-excerpt">Learn to build modern web applications from scratch using HTML, CSS, JavaScript, React, Node.js, and more.</p>
+                        <div class="course-meta">
+                            <div class="course-price">
+                                <span class="current">$89.99</span>
+                                <span class="original">$129.99</span>
+                            </div>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8 (1,240)</span>
+                            </div>
+                        </div>
+                        <button class="btn view-details" data-course="1">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="course-card" data-category="new technology" data-title="data science machine learning">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Data Science Fundamentals">
+                        <div class="course-level">Intermediate</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-duration">
+                            <i class="far fa-clock"></i> 10 weeks
+                        </div>
+                        <h3 class="course-title">Data Science & Machine Learning Fundamentals</h3>
+                        <p class="course-excerpt">Master the fundamentals of data science, statistical analysis, and machine learning algorithms using Python.</p>
+                        <div class="course-meta">
+                            <div class="course-price">
+                                <span class="current">$94.99</span>
+                                <span class="original">$139.99</span>
+                            </div>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.7 (980)</span>
+                            </div>
+                        </div>
+                        <button class="btn view-details" data-course="2">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="course-card" data-category="bestseller popular business" data-title="digital marketing masterclass">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Digital Marketing Masterclass">
+                        <div class="course-level">All Levels</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-duration">
+                            <i class="far fa-clock"></i> 6 weeks
+                        </div>
+                        <h3 class="course-title">Digital Marketing Masterclass</h3>
+                        <p class="course-excerpt">Learn SEO, social media marketing, content marketing, email campaigns, and analytics to grow any business.</p>
+                        <div class="course-meta">
+                            <div class="course-price">
+                                <span class="current">$79.99</span>
+                                <span class="original">$119.99</span>
+                            </div>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9 (2,150)</span>
+                            </div>
+                        </div>
+                        <button class="btn view-details" data-course="3">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Course 4 -->
+                <div class="course-card" data-category="free design" data-title="ui ux design principles">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="UI/UX Design Principles">
+                        <div class="course-level">Beginner</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-duration">
+                            <i class="far fa-clock"></i> 4 weeks
+                        </div>
+                        <h3 class="course-title">UI/UX Design Principles</h3>
+                        <p class="course-excerpt">Learn the fundamentals of user interface and experience design, including wireframing, prototyping, and usability testing.</p>
+                        <div class="course-meta">
+                            <div class="course-price">
+                                <span class="current">Free</span>
+                            </div>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.6 (1,870)</span>
+                            </div>
+                        </div>
+                        <button class="btn view-details" data-course="4">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Course 5 -->
+                <div class="course-card" data-category="popular technology" data-title="python programming">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Python Programming">
+                        <div class="course-level">Intermediate</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-duration">
+                            <i class="far fa-clock"></i> 8 weeks
+                        </div>
+                        <h3 class="course-title">Advanced Python Programming</h3>
+                        <p class="course-excerpt">Dive deep into Python programming with advanced topics including decorators, generators, concurrency, and more.</p>
+                        <div class="course-meta">
+                            <div class="course-price">
+                                <span class="current">$84.99</span>
+                                <span class="original">$124.99</span>
+                            </div>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8 (1,540)</span>
+                            </div>
+                        </div>
+                        <button class="btn view-details" data-course="5">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Course 6 -->
+                <div class="course-card" data-category="bestseller technology" data-title="ios android app development">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mobile App Development">
+                        <div class="course-level">Advanced</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-duration">
+                            <i class="far fa-clock"></i> 12 weeks
+                        </div>
+                        <h3 class="course-title">iOS & Android App Development</h3>
+                        <p class="course-excerpt">Learn to build native mobile applications for both iOS and Android platforms using modern development tools.</p>
+                        <div class="course-meta">
+                            <div class="course-price">
+                                <span class="current">$99.99</span>
+                                <span class="original">$149.99</span>
+                            </div>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9 (2,010)</span>
+                            </div>
+                        </div>
+                        <button class="btn view-details" data-course="6">View Details</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="no-results" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No courses found</h3>
+                <p>Try adjusting your search or filter criteria</p>
+                <button class="btn clear-filters">Clear All Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>10,000+</h3>
+                    <p>Students Enrolled</p>
+                </div>
+                <div class="stat-item">
+                    <h3>200+</h3>
+                    <p>Expert Instructors</p>
+                </div>
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Courses Available</p>
+                </div>
+                <div class="stat-item">
+                    <h3>95%</h3>
+                    <p>Satisfaction Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Students Say</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">The web development bootcamp completely transformed my career. I went from zero coding experience to landing a job as a junior developer in just 6 months!</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah Johnson">
+                            </div>
+                            <div class="author-details">
+                                <h4>Sarah Johnson</h4>
+                                <p>Web Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">The data science course provided me with practical skills that I immediately applied to my work. The instructors were knowledgeable and supportive throughout.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
+                            </div>
+                            <div class="author-details">
+                                <h4>Michael Chen</h4>
+                                <p>Data Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">As a small business owner, the digital marketing masterclass gave me the tools I needed to significantly increase my online presence and sales. Highly recommended!</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emma Rodriguez">
+                            </div>
+                            <div class="author-details">
+                                <h4>Emma Rodriguez</h4>
+                                <p>Business Owner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Updated with New Courses</h2>
+            <p>Subscribe to our newsletter to get notified about new courses, special offers, and educational resources.</p>
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    <!-- Course Detail Modal -->
+    <div class="modal" id="course-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-course-hero">
+                <img src="" alt="" id="modal-course-image">
+            </div>
+            <div class="modal-course-content">
+                <div class="modal-course-header">
+                    <div>
+                        <h2 class="modal-course-title" id="modal-course-title"></h2>
+                        <div class="modal-course-meta">
+                            <span class="modal-meta-item"><i class="far fa-clock"></i> <span id="modal-course-duration"></span></span>
+                            <span class="modal-meta-item"><i class="fas fa-signal"></i> <span id="modal-course-level"></span></span>
+                            <span class="modal-meta-item"><i class="fas fa-star"></i> <span id="modal-course-rating"></span></span>
+                        </div>
+                    </div>
+                    <div class="modal-course-price">
+                        <div class="course-price">
+                            <span class="current" id="modal-course-price-current"></span>
+                            <span class="original" id="modal-course-price-original"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="modal-course-description" id="modal-course-description"></p>
+                
+                <div class="modal-course-outcome">
+                    <h4>What You'll Learn</h4>
+                    <ul id="modal-course-outcomes">
+                        <!-- Will be populated by JavaScript -->
+                    </ul>
+                </div>
+                
+                <div class="modal-course-actions">
+                    <a href="Join.html" class="btn">Enroll Now</a>
+                    <button class="btn btn-outline">Add to Wishlist</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----Footer Section---->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Logo & About -->
+            <div class="footer-col">
+                <h2 class="footer-logo">🎓 EDUBIN</h2>
+                <p>
+                    EDUBIN is a modern learning platform that provides quality education
+                    resources, expert-led courses, and community-driven events to
+                    empower students worldwide.
+                </p>
+                <!-- Social Media Icons -->
+                <div class="footer-social">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Sitemap -->
+            <div class="footer-col">
+                <h3>Sitemap</h3>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="Join.html">Join/Login</a></li>
+                    <li><a href="Contact.html">Contact us</a></li>
+                    <li><a href="Team.html">Team</a></li>
+                    <li><a href="Courses.html">Courses</a></li>
+                    <li><a href="Resources.html">Resources</a></li>
+                    <li><a href="Events.html">Events</a></li>
+                    <li><a href="Faq.html">FAQ</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul class="nav-links">
+                    <li><a href="Faq.html">FAQs</a></li>
+                    <li><a href="#">Privacy & Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Documentation</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p>
+                    <i class="fas fa-home"></i> 123 Learning Street, New Baneshwor,
+                    Kathmandu
+                </p>
+                <p><i class="fas fa-phone"></i> +1 (647) 123-4567, +9779716345689</p>
+                <p><i class="fas fa-envelope"></i> support@edubin.com</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 EDUBIN. All Rights Reserved.</p>
+        </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="JavaScript/courses.js"></script>
+    <script src="JavaScript/trail.js"></script>
+    <script src="JavaScript/script.js"></script>
 </body>
 </html>
